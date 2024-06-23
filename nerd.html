@@ -6,18 +6,239 @@
     <title>P H O E N I X J E N N</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="Scripts/angular.js"></script>
-    <script type="text/javascript" src="/Scripts/angular-animate.js"></script>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
     <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href="Hover-master/css/hover-min.css" rel="stylesheet" />
-    <link href="phoenixjenn.css" rel="stylesheet" />
+    <link href=http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+    <link href="bootstrap3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/glyphs.css" rel="stylesheet" type="text/css">
+    <link href="css/glyphicons.css" rel="stylesheet" type="text/css">
+    <link href="css/socicon.css" rel="stylesheet" type="text/css">
+
+    <link href="Hover-master/css/hover-min.css" rel="stylesheet"/>
+    <link href="css/phoenixjenn.css" rel="stylesheet"/>
+    <link href=/hover.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+    <script type="text/javascript" src="Scripts/angular-animate.js"></script>
+    <script type="text/javascript" src="Scripts/mainapp.js"></script>
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+
+    <script src="bootstrap3.3.6/js/bootstrap.min.js"></script>
+    <script src="Scripts/ui-bootstrap-tpls-1.3.3.min.js"></script>
+
+     <style>
+
+				//ff000000 red
+
+		    .raceswrapper {
+		            position: relative;
+
+		    box-shadow: 0 3px 5px rgba(0,0,0,.4) , 0 -3px 5px rgba(0,0,0,.4);
+		        }
+		    .races{
+		    list-style:none;
+		    overflow:hidden;
+		    margin:0;padding:0;
+		    list-style-image:none;
+		    display:block;
+		    vertical-align:baseline;
+
+		    }
+		    li.races-row {
+
+		    float: left;
+		    padding: 0;
+		    margin: 0;
+		    display: block;
+		    position: relative;
+		    overflow: hidden;
+		    cursor: pointer;
+		    z-index: 99;
+		}
+		    </style>
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50" id="myPage" ng-app="">
     <div ng-include="'nav.html'"></div>
+
+
+
+	 <div class="jumbotron text-center comicpanel" style="background-color:black;margin-bottom:0px">
+      <span style="color:#ffffff;font-size:18px;">*Note: I've got an idea for a header image, I just need to find the time! *</span>
+
+      <span class="glyphicons glyphicons-conversation logo" style="color:#ffffff"></span>
+      <!--
+      <img src="images/athlete.png" class="img-responsive" style="width:100%" alt="Image">
+    -->
+    </div>
+    <div id="foreword" class="container-fluid">
+        <h1>Summary</h1>
+        <div class="row">
+            <!--  <h2>Fitness</h2>-->
+
+                <div style="position: absolute; left: 0px;">
+                  <span class="glyphicons glyphicons-glasses  logo slideanim" style="color:#ffffcc;"></span>
+                </div>
+
+                <div class="col-sm-6" style="padding-left:220px;">
+                  <p><h3 style="margin-top:0px;">I've worked in technology since 1991. I took a very windy path to get to where I am today.</h3></p>
+                  <p>My first job was in graphic design at Ernst &amp; Young, LLC in the Healthcare Consulting division.
+                    It was a temp job during my senior year at BC and they offered me significantly more money
+                    than any of the sales or marketing jobs for which I was interviewing on campus.
+                    I remember one of the partners asked me what I wanted to do with my career. My response was that I wanted
+                    to become a Director of Technology one day. I told him my strategy &#8212; to work in all of the
+                    functional departments that I would manage, thereby being able to completely understand the pains of my organization,
+                    from the ground up. He told me I was crazy and walked away. What he didn't know is that I would follow through with
+                    my plan and one day build a product that would eventually sell to a fortune 500 company
+                    (press release <i> <a href="https://www.factset.com/news/streetaccount" target="_blank" style="color:#fcfcfc;">here</a>). My title was Director of Technology
+                    before it sold.
+                  </p>
+                </div>
+
+                <div class="col-sm-6">
+
+                    <p>The problem with realizing your dreams is that you're left with the feeling "Ok, I did that. What's next?"
+                      The problem was that I didn't have a plan. Desperate to fill that empty void of having a life goal, I started
+                      teaching fitness classes, became a personal trainer, got a masters degree in sport psychology and opened a gym.
+                      Once again, I felt "Now what?".
+                      </p>
+                      <p>In late 2016 I made a resolution, that I would return my passion to technology.
+                        My goals included:
+                      </br>
+                      <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>
+                        Find a new job in an exciting company where I had room to grow.
+                      </br>
+                        <div style="color:#ffffff; margin-top:10px;">
+                          <em>&nbsp;&nbsp;&nbsp;&nbsp;I am now a Senior Software Development Manager at Audible</em></div>
+
+                      </h5>
+                      <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>
+                        Volunteer more in the tech community.
+                      </br> <div style="color:#ffffff; margin-top:10px;"><em>
+                          &nbsp;&nbsp;&nbsp;&nbsp;I am now on the Leadership board for Girl Develop It (Boston Chapter)</em></div>
+                      </h5>
+
+                      <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>
+                        Find opportunities to speak and teach.
+                      </br> <div style="color:#ffffff; margin-top:10px;">
+                          <em> &nbsp;&nbsp;&nbsp;&nbsp;I was accepted to speak at Grace Hopper Celebration of Women in Computing as well as numerous panels, classes and tech talks.
+
+                        </em></div>
+                      </h5>
+
+                </div>
+        </div>
+
+
+    </div>
+
+    <div id="education" class="section42 container-fluid ">
+        <h1>Education</h1>
+        <div class="row">
+          <div style="position: absolute; left: 0px;">
+            <span class="glyphicons glyphicons-education logo slideanim"></span>
+          </div>
+          <div class="col-sm-9" style="padding-left:220px;">
+                <h3 style="margin-top:0px;">
+                    MBA, Finance / Information Technology</h3>
+                <h4><img src="images/bc.gif" width="60">Boston College, Carroll Graduate School of Management</h4>
+
+                <h3>BS, Marketing / Management Information Systems</h3>
+                <h4><img src="images/bc.gif" width="60">Boston College, Carroll School of Management</h4>
+                    <strong>Undergraduate Highlights:</strong>
+                    <ul>
+                        <li>Favorite Courses: Advertising, System Design, Strategic Management</li>
+                        <li>BC Band Drumline: I was in the drumline at BC and
+                          we opened for John Williams conducting the POPS at BC.
+                          We played a medley of Superman, Indiana Jones and Star Wars. </li>
+                    </ul>
+            </div>
+            <div class="col-sm-3">
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+<div>
+			<div id="techtalks" class="container-fluid section2">
+
+						<h1>Awards, Presentations &amp; Classes</h1>
+            <div class="row">
+                <div style="position: absolute; left: 0px; ">
+                  <span class="glyphicons glyphicons-certificate  logo slideanim" style="color:#e6e6e6;"></span>
+                </div>
+                <div class="col-sm-3" style="padding-left:220px;">
+                </div>
+                <div class="col-sm-9">
+                  <strong>Presentations, Panels &amp; Courses</strong>
+                  <h5><span class="glyphicons glyphicons-cup logo-tiny"> </span><i>Best In Show</i> Hackathon 2017, FactSet Research Systems, Out of 620+ participants </h5>
+                  <h5><span class="glyphicons glyphicons-group-chat logo-tiny"> </span><i>Surviving the Technical Interview</i>
+                    Grace Hopper Celebration for Women in Computing, Orlando, Oct 5 &amp; 6, 2017
+                    (<a href="https://web.archive.org/web/20171124082858/https://www.eiseverywhere.com/ehome/index.php?eventid=212774&amp;tabid=556987&amp;cid=1738254&amp;sessionid=16582555&amp;sessionchoice=1&amp;" target="_blank">Lecture &amp; Student Opportunity Lab Workshop</a>)</h5>
+                    <h5><span class="glyphicons glyphicons-group-chat logo-tiny"> </span>
+                      Developer Career Paths, Boston Startup Week (<a href="https://web.archive.org/web/20171124082858/http://www.getvamos.com/events/developer-career-paths-in-the-boston-startup-scene/14638769" target="_blank">Panel</a>)</h5>
+                    <h5><span class="glyphicons glyphicons-cup logo-tiny"> </span>
+                    Intro to HTML &amp; CSS
+                      <a href="https://web.archive.org/web/20171124082858/https://docs.google.com/presentation/d/1K14Bx2kaxiVf-IGp8g4raKDFGTo4Wm5vmMfe2uKTdgE/edit?usp=sharing" target="_blank">slides</a>
+                      Javascript: It's ALIVE! <a href="https://web.archive.org/web/20171124082858/https://docs.google.com/presentation/d/1NgJJt5LJPFhVq3cAqdDShOCP3e38qghOxkVquJSai9M/edit?usp=sharing" target="_blank">slides</a>
+                      , Geek Girl Cape Code 2017
+                    </h5>
+                    <h5><span class="glyphicons glyphicons-cup logo-tiny"> </span>HTML &amp; CSS, Girl Develop It (<a href="https://web.archive.org/web/20171124082858/https://www.meetup.com/Girl-Develop-It-Boston/" target="_top">4 week class</a>)
+                </br>
+                <b>Other fun conferences to attend</b>
+                    <h5>Boston Tech Jam</h5>
+                </div>
+            </div>
+      </div>
+</div>
+
+
+<div id="section3" class="container-fluid">
+  <h1>Continuing Education</h1>
+  <div class="row">
+      <div style="position: absolute; left: 0px; ">
+        <span class="glyphicons glyphicons-book-open  logo slideanim" style="color:#e6e6e6;"></span>
+      </div>
+      <div class="col-sm-3" style="padding-left:220px;">
+      </div>
+      <div class="col-sm-9">
+        <strong>Presentations, Panels &amp; Courses</strong>
+
+          <h5><span class="glyphicons glyphicons-cup logo-tiny"> </span>HTML &amp; CSS, Girl Develop It (<a href="https://web.archive.org/web/20171124082858/https://www.meetup.com/Girl-Develop-It-Boston/" target="_top">4 week class</a>)
+      </br>
+      <b>Other fun conferences to attend</b>
+          <h5>Boston Tech Jam</h5>
+      </div>
+  </div>
+</div>
+
+
+
+<div id="section4" class="container-fluid">
+<h3></h3>
+<p>
+
+  Continuing education is key, my favorite sites are:
+  <ul><span class="glyphicons glyphicons-laptop  logo-tiny"></span>
+    <li>CodeSchool</li>
+    <li>Pluralsight</li>
+    <li>Codecademy</li>
+    <li>W3Schools</li>
+
+  </ul>
+
+</p>
+</div>
+
+
+
+
+
     <script src="footer.js" type="text/javascript"></script>
 
 </body>

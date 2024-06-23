@@ -4,28 +4,31 @@
     <title>P H O E N I X J E N N</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <link href="bootstrap3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="glyphs.css" rel="stylesheet" type="text/css">
-    <link href="Hover-master/css/hover-min.css" rel="stylesheet" />
-    <link href="phoenixjenn.css" rel="stylesheet" />
-    <link href="hover.css" rel="stylesheet" />
+    <link href="bootstrap3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/glyphs.css" rel="stylesheet" type="text/css">
+    <link href="css/glyphicons.css" rel="stylesheet" type="text/css">
+    <link href="css/socicon.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?rd5re8">
+    <link href="Hover-master/css/hover-min.css" rel="stylesheet"/>
+    <link href="css/phoenixjenn.css" rel="stylesheet"/>
+    <link href="css/hover.css" rel="stylesheet"/>
 
 
-    <script type="text/javascript" src="Scripts/angular.js"></script>
-    <script type="text/javascript" src="/Scripts/angular-animate.js"></script>
+    <script type="text/javascript" src="Scripts/angular-animate.js"></script>
     <script type="text/javascript" src="Scripts/mainapp.js"></script>
     <script src="Scripts/jquery-2.2.3.min.js"></script>
 
-    <script src="bootstrap3.3.6/js/bootstrap.js"></script>
+    <script src="bootstrap3.3.6/js/bootstrap.min.js"></script>
     <script src="Scripts/ui-bootstrap-tpls-1.3.3.min.js"></script>
 
 
-
-
-
-    <!--<script>
+       <!--<script>
         jQuery(function ($) {
             // local url of page (minus any hash, but including any potential query string)
             var url = location.href.replace(/#.*/, '');
@@ -44,7 +47,7 @@
                 // check is anchor href starts with page's URI
                 if (href.indexOf(url + '#') == 0) {
                     // remove URI from href
-                    
+
                     href = href.replace(url, '');
                     // update anchors HREF with new one
                     $a.attr('href', href);
@@ -90,49 +93,53 @@
         });
     </script>-->
 
+
     <style>
+
 
        body {
             position: relative;
-             background-color: #fff;
-              /*font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;*/
+             background-color: #ffffff;
         }
+      
         #comicpanel {
-        background-color: #000000;
+            background-color: #000000;
         }
         #foreword {
             padding-top: 50px;
             height: 500px;
-            color: #fff;
-            background-color: #ff0000;
+            color: #000000;
+            font-family: verdana;
+            background-color: #ffd800; // yellow
+            
         }
-
+          
         #section2 {
             padding-top: 50px;
             height: 500px;
-            color: #000;
-            background-color: #ffffff;
+            font-family: verdana;
+            color: #000000;
+            background-color: #ffffff; //white
         }
 
         #section3 {
             padding-top: 50px;
             height: 500px;
-            color: #fff;
-            background-color: #0094ff;
+            font-family: verdana;
+            color: #fffff;
+            background-color: #0094ff; //blue
         }
          #section4 {
             padding-top: 50px;
             height: 500px;
-            color: #000;
-            background-color: #ffd800;
+            color: #ffffff;
+            background-color: #ff0000; //red 
         }
         #section41 {
             padding-top: 50px;
             height: 500px;
             color: #000;
-            background-color: #808080;
+            background-color: #808080; //grey
         }
 
         #section42 {
@@ -161,16 +168,14 @@
     <div ng-include="'nav.html'"></div>
 
 
-
-
     <div class="jumbotron text-center comicpanel" style="background-color:black;">
         <style>
-        .row-morepad {
-padding-right:15px;
-padding-left:15px;
-margin-right: 15px;
- margin-left: 15px;
-}
+          .row-morepad {
+                    padding-right:15px;
+                    padding-left:15px;
+                    margin-right: 15px;
+                     margin-left: 15px;
+            }
 
             img.panel:hover {
                 opacity: .5;
@@ -194,12 +199,15 @@ margin-right: 15px;
             }
 
             .is-white {
-                fill: #FFF;
-                font-size: 16px;
+                font-size: 16px ;
                 color:white;
          
             }
-
+              .cardDetails {
+                font-size: 16px;
+                fill: #FFF;
+                color:white;
+            }
             div.hovertext {
                 display: none;
                 position: relative;
@@ -212,6 +220,7 @@ margin-right: 15px;
                 font-size: 16px;
                 font-size: 1rem;
             }
+          
         </style>
         <!-- 3 panels here, 3 column with text under each column  -->
         <!--http://www.queness.com/resources/html/masking-images-with-shape/index.html-->
@@ -224,15 +233,22 @@ margin-right: 15px;
                         <br /> &nbsp;<br />
                         <span class="heading">Full Stack Software Engineer</span>
                         <hr />
-                        <span class="is-white icon icon-quotes-left"></span><span class="is-white"> Nerdy By Nature </span><span class="  is-white icon icon-quotes-right"></span>
-                        <br /> &nbsp;<br /> <p class="is-white ">MBA, Information Technology/Finance<br />BS, Marketing/Information Systems </p>
-                        <a class="button cta hvr-float-shadow"><img src="images/go_btn4.png" /></a>
+                        <span class="is-white icon icon-quotes-left"></span>
+                        <span class="is-white  "> Nerdy By Nature </span>
+                        <span class="  is-white icon icon-quotes-right"></span>
+                        <br /> &nbsp;<br /> 
+                        <span class="cardDetails">MBA, Information Technology/Finance
+                        <br />BS, Marketing/Information Systems 
+                        <br />AWS Certified Solutions Architect Associate
+                        <br />AWS Certified Developer Associate
+                        </span>
+                        <a href="nerd.html"  class="button cta hvr-float-shadow"><img src="images/go_btn4.png" /></a>
                         <!--<a href="nerd.html" class="button" >VIEW </a>-->
                     </div>
                     <div class="bg"></div>
                     <div class="base">
                         <img src="images/nerd-1.png" class="img-responsive panel wrapper" style="width:100%" alt="Image">
-                        <span class="is-white">Some Text Here</span>
+                        <span class="is-white">Software Engineering Leader</span>
                     </div>
                 </div>
 
@@ -254,9 +270,10 @@ margin-right: 15px;
                         <span class="heading">Athlete/Personal Trainer</span>
                         <hr />
                         <span class="is-white icon icon-quotes-left"></span><span class="is-white"> Athletic By Necessity </span><span class=" is-white icon icon-quotes-right"></span>
-                        <br /> &nbsp;<br /><p> <p class="is-white ">MS, Exercise Science/Sport Psychology </p>
-
-                        <p class="is-white smaller">Cyclist, Runner, Dancer, Adventure Racer... </p>
+                        <br /> &nbsp;<br /><p> 
+                        <span class="cardDetails ">MS, Exercise Science/Sport Psychology </span>
+                        <br/>
+                        <span class="cardDetails ">Cyclist, Runner, Dancer, Adventure Racer... </span>
                        
                         <a href="athlete.html"  class="button cta hvr-float-shadow"><img src="images/go_btn.png" /></a>
 
@@ -265,7 +282,7 @@ margin-right: 15px;
                     <div class="base">
                         <!--<img src="images/nerd-1.png" class="img-responsive panel wrapper" style="width:100%" alt="Image">-->
                         <img src="images/bike-2.png" class="img-responsive panel" style="width:100%" alt="Image">
-                        <span class="is-white">Some Text Here</span>
+                        <span class="is-white">Athlete & Personal Trainer</span>
                     </div>
                 </div>
 
@@ -279,14 +296,14 @@ margin-right: 15px;
                 <div class="shape">
                     <a href="#" class="overlay "></a>
                     <div class="details"><br /> &nbsp;<br />
-                        <span class="heading">Creative</span>
+                        <span class="heading">Creator</span>
                         <hr />
                         <span class="is-white icon icon-quotes-left"></span><span class="is-white"> Creative by design </span><span class=" is-white icon icon-quotes-right"></span>
                         <br /> &nbsp;<br />
                         
-                        <p> <p class="is-white ">Adventurer with a creative streak </p>
-
-                        <p class="is-white smaller">Paint, bake, design </p>
+                         
+                        <p class="is-white smaller">"Creativity is intelligence having fun."
+                          <br/>&#151; Einstein</p>
                       
                             <a href="creative.html" class="button cta hvr-float-shadow"><img src="images/go_btn4.png" /></a>
                         
@@ -295,152 +312,108 @@ margin-right: 15px;
                     <div class="base">
                         <!--<img src="images/nerd-1.png" class="img-responsive panel wrapper" style="width:100%" alt="Image">-->
                         <img src="images/fly3.png" class="img-responsive panel" style="width:100%" alt="Image">
-                        <span class="is-white">Some Text Here</span>
+                        <span class="is-white">Creator</span>
                     </div>
                 </div>
 
             </div>
         </div>
-        <form class="form-inline">
-            <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-            <button type="button" class="btn btn-danger">Subscribe</button>
-        </form>
+   
 
     </div>
 
  
     
-
     <div id="foreword" class="container-fluid">
         <h1>Foreword</h1>
         <div class="row">
-            <div class="col-sm-1">
-                <span class="glyphicon glyphicon-star  logo-small"></span>
-               
+            <div style="position: absolute; left: 0px; ">
+                <span class="glyphicon glyphicon-star  logo" style="color:#ffffcc;"></span>
             </div>
-            <div class="col-sm-11">
-                <p>I like to think of myself as a renaissance girl. Technically, I'm a software engineer, but I dabble in the arts as well. I work hard to play hard... always dreaming up new projects and adventures...always pushing my physical, intellectual and creative limits. I make annual lists of goals, post them publicly, and do everything that I can to complete them.
-
-Life is short, and I believe that if something doesn't work, do something else.
-I created this site as a playground for projects that I've always wanted to work on, as well as a showcase for some of my adventures. This site is meant to be a work in progress. I've even left myself To Do notes on the pages! After 2 years of working on it for a few minutes here and there, I decided to launch it as is. It isn't perfect, but that was never the intention.
-
-So here we are. On September, 17, 2017, we have lift-off. I welcome feedback and new ideas.</p>
+            <div class="col-sm-6" style="padding-left:220px;">
+                  <p>I like to think of myself as a renaissance girl.
+                  Technically, I'm a software engineer, but I dabble in the arts as well. I work hard to play hard...
+                  always dreaming up new projects and adventures...always pushing my physical, intellectual and creative limits.
+                I make annual lists of goals, post them publicly, and do everything that I can to complete them.</p>
+                <p><b>Life is short, and I believe that if something doesn't work, do something else. </b></p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-1">
-                <span class="glyphicon glyphicon-star  logo-small"></span>
-            </div>
-            <div class="col-sm-11">
-                Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!
+            <div class="col-sm-6" style="vertical-alight:top;">
+                  <p>I created this site as a playground for projects that I've always wanted to work on,
+                    as well as a showcase for some of my adventures.
+                    This site is meant to be a work in progress. I've even left myself To Do notes on the pages!
+                    After 2 years of working on it for a few minutes here and there, I decided to launch it as is.
+                    It isn't perfect, but that was never the intention. </p>
+                    <p>So here we are. On September, 17, 2017, we have lift-off. I welcome feedback and new ideas.
             </div>
         </div>
-        <div class="container-fluid bg-grey">
-            <!--<h2 class="text-center">CONTACT</h2>-->
-            <!--<div class="row">
-                <div class="col-sm-5">
-                    <p>Contact us and we'll get back to you within 24 hours.</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> Boston, MA</p>
-
-                    <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-                </div>
-                <div class="col-sm-7">
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                        </div>
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                        </div>
-                    </div>
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <button class="btn btn-default pull-right" type="submit">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-        </div>
-
-
     </div>
-    <div id="section2" class="container-fluid">
-        <h1>Section 2</h1>
-        http://ianlunn.github.io/Hover/
-        <a class="button cta hvr-float-shadow"><img src="images/go_btn.png" /></a>
-        <h2>Portfolio</h2>
-        <h4>What we have created</h4>
-        <div class="row text-center">
-            <div class="col-sm-4">
-                <!-- style to get the glyphicons working -->
-                <style type="text/css">
-                    .inner {
-                        position: absolute;
-                        font-size: 50px;
-                    }
-
-                    .star {
-                        left: 50px;
-                        position: relative;
-                    }
-
-                    div.test {
-                        position: relative;
-                    }
-
-                        div.test div.test {
-                            position: absolute;
-                            top: 0;
-                            left: 20px;
-                        }
-                </style>
-                <div class="test outer">
-                    <div class="test inner"><span class="star glyphicon  glyphicon-star img-circle text-muted"></div>
-                    <div class="test inner">Action Hero</div>
-                    <div class="test inner"></div>
-                    <div class="test inner"></div>
-                </div>
 
 
-                <div class="thumbnail">
-                    <img src="" alt="Paris">
-                    <p><strong> </strong></p>
-                    <p> </p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="" alt="Boston">
-                    <p><strong>Boston</strong></p>
-                    <p> </p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="" alt="San Francisco">
-                    <p><strong>San Francisco</strong></p>
-                    <p>Yes, San Fran is ours</p>
-                </div>
-            </div>
+    
+   
 
+     <div id="section2" class="container-fluid">
+        <h1>Fitness </h1>
+      <!--  <h2>Fitness</h2>-->
+      <div class="row">
+        <div style="position: absolute; left: 0px; ">
+          <span class="glyphicons glyphicons-person-running logo" style="color:#e6e6e6;"></span>
+            <!--  <span class="glyphicons glyphicons-bicycle logo" style="color:#cccccc;"></span>
+            <span class="glyphicons glyphicons-kettlebell"></span>
+            <span class="glyphicons glyphicons-dumbbell"></span>
+          -->
         </div>
-
-
-        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <div class="col-sm-6" style="padding-left:220px;">
+            <p>I've always been an off-beat athlete, interested in fitness activities where you are only
+              competing against yourself. Running, cycling, skating, martial arts, etc.
+              Although I believe that fitness is a personal journey, the science of excercise and nutrition
+              intrigued me enough to dabble in personal training, group exercise. Oh, and I may or may not have also gotten a Masters in Exercise Science, focusing on Sport Psychology.
+            </p>
+          </div>
+        <div class="col-sm-6"></div>
+      </div>
     </div>
+
+
     <div id="section3" class="container-fluid">
-        <h1>Section 3</h1>
-        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    </div>
-    <div id="section4" class="container-fluid">
-        <h1>Section 4  </h1>
-        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <h1>Creative</h1>
+        <div class="row">
+            <div style="position: absolute; left: 0px; ">
+              <span class="glyphicons glyphicons-lightbulb logo" style="color:#e6e6e6;"></span>
+            </div>
+            <div class="col-sm-6" style="padding-left:220px;">
+                <p>I have a wild creative streak. I like to paint, bake, draw, make jewelry.
+                Anything that allows me to create, makes me happy.</p>
+                <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                    <p>&nbsp;</p>
 
+              </div>
+        </div>
+      </div>
+
+
+      <div id="section4" class="container-fluid">
+      <h1>Why PhoenixJenn? </h1>
+      <div class="row">
+          <div style="position: absolute; left: 0px; ">
+            <span class="glyphicons glyphicons-fire logo" style="color:#e6e6e6;"></span>
+          </div>
+          <div class="col-sm-6" style="padding-left:200px;">
+            <p>Growing up, my hair was strawberry blonde - or as most people described it - bright orange.
+              I was a bit of a tomboy *examples coming soon* and loved superheroes.
+              Jean Grey, aka The Phoenix, was also a flaming orange-head.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="images/redhead.png">
+            <p>&nbsp;</p>
+          </div>
+        </div>
     </div>
+
+
+     
 
     <div id="section41" class="container-fluid" name="section41">
         <h1>Section 4 Submenu 1</h1>
