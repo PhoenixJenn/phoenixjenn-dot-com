@@ -1,0 +1,732 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+    <link rel="stylesheet" href="bootstrap3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="Scripts/jquery-ui.min.js"></script>
+
+    <script src="Scripts/ui-bootstrap-tpls-1.3.3.min.js"></script>
+
+    
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <!--<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+
+    <script type="text/javascript" src="Scripts/moment.js"></script>
+    <!--<script src="Scripts/bootstrap-datepicker.js"></script>-->
+    <!--<link href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet" />-->
+    <!--<script type="text/javascript" src="Bootstrap/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>-->
+    <!--<link rel="stylesheet" href="Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="Bootstrap/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">-->
+    <!--<script type="text/javascript" src="BootstrapValidator/src/js/bootstrapValidator.js"></script>-->
+    <script type="text/javascript" src="/Scripts/angular-animate.js"></script>
+
+
+
+    <!--<script type="text/javascript" src="Scripts/event.js"></script>-->
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />-->
+    <!--<script type="text/javascript" src="Bootstrap/bootstrap-3.3.6-dist/js/transition.js"></script>
+    <script type="text/javascript" src="Bootstrap/bootstrap-3.3.6-dist/js/collapse.js"></script>-->
+    <!--<script type="text/javascript" src="Bootstrap/bootstrap-3.3.6-dist/bootstrap-datetimepicker.min.js"></script>-->
+
+
+    <style>
+                #mydiv {
+                transition: all linear 0.5s;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1000;
+                    background-color: grey;
+                    opacity: .8;
+                }
+
+                .ajax-loader {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-left: -32px; /* -1 * image width / 2 */
+                    margin-top: -32px; /* -1 * image height / 2 */
+                    display: block;
+                }
+                 .ng-hide {
+                    height: 0;
+                    width: 0;
+                    background-color: transparent;
+                    top: -200px;
+                    left: 200px;
+
+
+                }
+
+                .checkbox.inline.no_indent,
+        .checkbox.inline.no_indent+.checkbox.inline.no_indent {
+          margin-left: 0;
+          margin-right: 10px;
+        }
+        .checkbox.inline.no_indent:last-child {
+          margin-right: 0;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                $("#startDate").datepicker();
+            });
+        })(jQuery);
+    </script>
+
+    <script>
+        //View, which is the HTML
+        //Model, which is the data available for the current view.
+        //Controller, which is the JavaScript function that makes/changes/removes/controls the data.
+        //Then the scope is the Model.
+        //The scope is a JavaScript object with properties and methods, which are available for both the view and the controller.
+        //It is important to know which scope you are dealing with, at any time.
+        //there can be sections in the HTML DOM which can only access certain scopes.
+
+
+        //http://www.ashishblog.com/crud-operation-using-angularjs-and-webapi-in-asp-net-webform/
+        //http://techfunda.com/howto/562/http-get-server-request
+        //To create your own service, connect your service to the module:
+
+        //app.service('hexafy', function () {
+        //    this.myFunc = function (x) {
+        //        return x.toString(16);
+        //    }
+        //});
+        //app.controller('myCtrl', function ($scope, hexafy) {
+        //    $scope.hex = hexafy.myFunc(255);
+        //});
+        //To use the service inside a filter, add it as a dependency when defining the filter:
+        //app.filter('myFormat', ['hexafy', function (hexafy) {
+        //    return function (x) {
+        //        return hexafy.myFunc(x);
+        //    };
+        //}]);
+        //http://techfunda.com/howto/565/http-post-server-request
+
+        //https://angular-ui.github.io/bootstrap/
+        var app = angular.module('myApp', ['ui.bootstrap']);
+
+        var url = 'EventsService.asmx/GetAllEvents';
+
+        //$scope.EventStart = new Date();
+        //$http service methods  .delete(), get(), .head(), .jsonp(), .patch(), .post(), .put()
+
+        app.factory('eventFactory', function ($http) {
+            return {
+                getEvent: function () {
+                    return $http.get('EventsService.asmx/GetAllEvents');
+                },
+
+                addEvent: function (event) {
+                    return $http.post('EventsService.asmx/putEvent', event);
+
+
+                    //response from the server is an object with these properties: .config, .data, .headers, .status, .statusText
+                    //.then(function(response) { $scope.content = response.data; {);
+                    // $http.post('EventsService.asmx/putEvent', event, {headers: { 'Content-Type': 'application/json; charset=utf-8' }}0;
+                    //var req = {
+                    //    method: 'POST',
+                    //    url: 'EventsService.asmx/putEvent',
+                    //    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+                    //    data: event
+
+                    //};
+                    //var req = {
+                    //    method: 'POST',
+                    //    url: 'EventsService.asmx/putEvent',
+                    //    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+                    //    data: JSON.stringify({
+                    //        empData: emp, empID: empID
+                    //    })
+                    //};
+                    //),
+                    //    success: function (reponse) {
+
+                    //    },
+                    //    error: function (error) {
+                    //        console.log(error);
+                    //    }
+                    //};
+                    //return $http(req);
+                    // return $http(req).then(;
+
+                },
+                deleteEvent: function (event) {
+                    //return $http.delete(url + event.EventId);
+                    // return $http.delete('EventsService.asmx/deleteEvent', event.EventId);
+                    //alert(event.EventId);
+                    return $http.post('EventsService.asmx/deleteEvent', event);
+
+                },
+                updateEvent: function (event) {
+                    return $http.post('EventsService.asmx/putEvent', event);
+                }
+            };
+        }); // app.controller('EventController', function ($scope, $http) {
+
+        //In AngularJS, $scope is the application object (the owner of application variables and functions).
+
+        app.filter('parseDate', ['$filter', function ($filter) {
+
+            return function (input, format) {
+                return (input)
+                       ? $filter('date')(parseInt(input.substr(6)), format)
+                       : '';
+            };
+
+            // var re = /\\\/Date\(([0-9]*)\)\\\//;
+            // return function (x) {
+            //     var m = x.match(re);
+            //     if (m) return new Date(parseInt(m[1]));
+            //     else return null;
+            //};
+
+        }]);
+
+        app.controller('EventController', function PostsController($scope, $http, $timeout, eventFactory) {
+
+            $scope.events = [];
+            $scope.loading = true;
+            $scope.addMode = false;
+            $scope.addSuccess = false;
+
+
+
+            ///call this when you want to pause with a 'loading' spinner.
+            $scope.doIt = function () {
+                if ($scope.loading == false) {
+                    $scope.loading = true
+                    setTimeout(function () {
+                        $scope.loading = false
+                        $scope.$apply()
+                    }, 500);
+                }
+            };
+
+
+            $scope.regions = [
+                { regionId: 1, regionName: "Boston" },
+                { regionId: 2, regionName: "Norwalk" },
+                { regionId: 3, regionName: "New York" },
+                { regionId: 4, regionName: "Chicago" },
+                { regionId: 5, regionName: "San Francisco" },
+                { regionId: 6, regionName: "London" },
+                { regionId: 7, regionName: "Paris" },
+                { regionId: 8, regionName: "Milan" },
+                { regionId: 9, regionName: "Riga" },
+                { regionId: 10, regionName: "Frankfurt" },
+                { regionId: 11, regionName: "Dubai" }
+            ];
+
+            //The $interval service is AngularJS' version of the window.setInterval function.
+            //$interval(function () {         $scope.theTime = new Date().toLocaleTimeString();        }, 1000);
+            //$timeout(function () {          $scope.myHeader = "How are you today?";}, 2000);
+            ////this executes regardless AND WORKS
+            //$http.get("EventsService.asmx/GetAllEvents").success(function (data, status, headers, config)
+            //{
+            //    $scope.events = data;
+            //    // alert("success!");
+
+            //}).error(function () {alert("Fail!"); } );
+
+            //    $scope.GetAllData = function () {
+            //$scope.events.eventId = '';
+            //$scope.events.EventName = '';
+
+            $scope.toggleEdit = function () {
+                this.event.editMode = !this.event.editMode;
+                $scope.editMode = !$scope.editMode;
+            };
+
+            $scope.toggleAdd = function () {
+                $scope.addMode = !$scope.addMode;
+                $scope.addSuccess = false;
+            };
+
+            // update Event
+            $scope.save = function () {
+                $scope.loading = true;
+                var ev = this.event;
+                eventFactory.updateEvent(ev).success(function (data) {
+                    $scope.addSuccess = true;
+
+                    ev.editMode = false;
+                    $scope.loading = false;
+                }).error(function (data) {
+                    $scope.error = "An Error has occured while Saving event! " + data.ExceptionMessage;
+                    $scope.loading = false;
+
+                });
+            };
+
+            //**********************************
+            // add Event
+            $scope.add = function () {
+                $scope.loading = true;
+
+                // $scope.addRowAsyncAsJSON = function () {
+
+
+                //var myNewEventObj = {
+                //    EventId: myTempEvent.EventId,
+                //    EventName: myTempEvent.EventName,
+                //    EventDescription: myTempEvent.EventDescription,
+                //    EventRegionId: myTempEvent.EventRegionId,
+                //    EventVenue: myTempEvent.EventVenue,
+                //    EventStart: myTempEvent.EventStart,
+                //    EventEnd: myTempEvent.EventEnd,
+                //    EventOrganizerId: myTempEvent.EventOrganizerId
+                //};
+
+                //alert("eventId:" + myTempEvent.EventId);del.
+                //alert("EventName:" + myNewEventObj.EventName);
+                //alert("EventDescription:" + myNewEventObj.EventDescription);
+                //alert("EventRegionId:" + myNewEventObj.EventRegionId);
+                // CRUD http://www.ashishblog.com/crud-operation-using-angularjs-and-webapi-in-asp-net-webform/
+
+                //promises http://weblog.west-wind.com/posts/2014/Oct/24/AngularJs-and-Promises-with-the-http-Service
+                // model objects https://medium.com/opinionated-angularjs/angular-model-objects-with-javascript-classes-2e6a067c73bc#.2haeanxm2
+                //  $scope.events.push({ myNewEventObj });
+                // ** WATCHER ****
+                //responding to scope changes http://fdietz.github.io/recipes-with-angular-js/controllers/responding-to-scope-changes.html
+
+                myTempEvent = this.newevent;
+
+                myTempEvent.EventId = 0;
+                var eventJSON = {
+                    'EventId': myTempEvent.EventId,
+                    'EventName': myTempEvent.EventName,
+                    'EventDescription': myTempEvent.EventDescription,
+                    'EventRegionId': myTempEvent.EventRegionId,
+                    'EventVenue': myTempEvent.EventVenue,
+                    'EventStart': myTempEvent.EventStart,
+                    'EventEnd': myTempEvent.EventEnd,
+                    'EventOrganizerId': myTempEvent.EventOrganizerId
+                }
+
+                //http://techfunda.com/howto/562/http-get-server-request
+                eventFactory.addEvent(eventJSON).success(function (data) {
+                    // alert("Added Successfully!!");
+                    $scope.addSuccess = true;
+                    $scope.addMode = false;
+                    $scope.callAtTimeout = function () {
+
+                        $scope.addSuccess = false;
+                    }
+
+                    $timeout(function () { $scope.callAtTimeout(); }, 3000);
+                    //console.log(data);
+                    //http://stackoverflow.com/questions/31180550/how-to-test-properly-a-put-or-post-request-with-angular-karma-jasmine
+                    myReturnEvent = JSON.parse(data.d);
+                    // console.log(myReturnEvent);
+                    //console.log(myReturnEvent.EventId);
+                    //ONLY IF SUCCESS
+                    $scope.events.push({
+                        'EventId': myReturnEvent.EventId,
+                        'EventName': myReturnEvent.EventName,
+                        'EventDescription': myReturnEvent.EventDescription,
+                        'EventRegionId': myReturnEvent.EventRegionId,
+                        'EventVenue': myReturnEvent.EventVenue,
+                        'EventStart': myReturnEvent.EventStart,
+                        'EventEnd': myReturnEvent.EventEnd,
+                        'EventOrganizerId': myReturnEvent.EventOrganizerId
+                    });
+                    //alert('result:' + data.EventId);
+                    //this isn't working -----
+                    // $scope.events.push(data.d);
+
+                    $scope.loading = false;
+                }).error(function (data) {
+                    $scope.error = "An Error has occured while Adding event! " //+ data.ExceptionMessage;
+                    $scope.loading = false;
+                });
+
+                // };
+                //$scope.name = '';
+                //$scope.employees = '';
+                //$scope.headoffice = '';
+            };
+
+            // delete Event ---Needs to be finished ---uncomment when service ready
+            $scope.del = function (x) {
+                //  $scope.loading = true;
+                var currentEvent = this.event;
+                // alert(currentEvent.EventId);
+                var eventJSON = {
+                    'EventId': currentEvent.EventId
+                }
+                //http://www.w3schools.com/jsref/jsref_splice.asp
+                //delete AFTER you get the ok back from server
+
+                eventFactory.deleteEvent(eventJSON).success(function (data) {
+                    // alert("Deleted Successfully!!");
+                    //$.each($scope.events, function (i) {
+                    //    if ($scope.events[i].EventId === currentEvent.EventId) {
+                    //        $scope.events.splice(i, 1);
+                    //        return false;
+                    //    }
+                    //});
+                    $scope.events.splice(x, 1);
+                    $scope.apply;
+                    $scope.loading = false;
+                }).error(function (data) {
+                    $scope.error = "An Error has occured while Saving event! " + data.ExceptionMessage;
+                    $scope.loading = false;
+
+                });
+            };
+
+
+
+            //get all events
+            eventFactory.getEvent().success(function (data) {
+                $scope.events = data;
+                $scope.loading = false;
+            }).error(function (data) {
+                $scope.error = "An Error has occured while loading posts! " + data.ExceptionMessage;
+                $scope.loading = false;
+            });
+
+            $scope.$apply;
+
+            //    };
+            $scope.GetAllData = function () { };
+
+
+
+
+
+
+            //start events
+          //  app.controller('DatepickerPopupDemoCtrl', function ($scope) {
+                $scope.today = function() {
+                    $scope.dt = new Date();
+                };
+                $scope.today();
+
+                $scope.clear = function() {
+                    $scope.dt = null;
+                };
+
+                $scope.inlineOptions = {
+                    customClass: getDayClass,
+                    minDate: new Date(),
+                    showWeeks: true
+                };
+
+                $scope.dateOptions = {
+                    dateDisabled: disabled,
+                    formatYear: 'yy',
+                    maxDate: new Date(2020, 5, 22),
+                    minDate: new Date(),
+                    startingDay: 1
+                };
+
+                // Disable weekend selection
+                function disabled(data) {
+                    var date = data.date,
+                      mode = data.mode;
+                    return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+                }
+
+                $scope.toggleMin = function() {
+                    $scope.inlineOptions.minDate = $scope.inlineOptions.minDate ? null : new Date();
+                    $scope.dateOptions.minDate = $scope.inlineOptions.minDate;
+                };
+
+                $scope.toggleMin();
+
+                $scope.open1 = function() {
+                    $scope.popup1.opened = true;
+                };
+
+                $scope.open2 = function() {
+                    $scope.popup2.opened = true;
+                };
+
+                $scope.setDate = function(year, month, day) {
+                    $scope.dt = new Date(year, month, day);
+                };
+
+                $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+                $scope.format = $scope.formats[0];
+                $scope.altInputFormats = ['M!/d!/yyyy'];
+
+                $scope.popup1 = {
+                    opened: false
+                };
+
+                $scope.popup2 = {
+                    opened: false
+                };
+
+                var tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                var afterTomorrow = new Date();
+                afterTomorrow.setDate(tomorrow.getDate() + 1);
+                $scope.events = [
+                  {
+                      date: tomorrow,
+                      status: 'full'
+                  },
+                  {
+                      date: afterTomorrow,
+                      status: 'partially'
+                  }
+                ];
+
+                function getDayClass(data) {
+                    var date = data.date,
+                      mode = data.mode;
+                    if (mode === 'day') {
+                        var dayToCheck = new Date(date).setHours(0,0,0,0);
+
+                        for (var i = 0; i < $scope.events.length; i++) {
+                            var currentDay = new Date($scope.events[i].date).setHours(0,0,0,0);
+
+                            if (dayToCheck === currentDay) {
+                                return $scope.events[i].status;
+                            }
+                        }
+                    }
+
+                    return '';
+                }
+
+            //end events
+
+        });
+
+
+
+
+        // this is how reference: <div ng-app="myApp" w3-test-directive></div>
+        //or
+        //Element Directive: <w3-test-directive></w3-test-directive>
+        //Attribute Directive: <div w3-test-directive></div>
+        //Class Directive: <div class="w3-test-directive"></div>
+        //Comment Directive: <!-- directive: w3-test-directive -->
+        //By default the value is EA, meaning that both Element names and attribute names can invoke the directive.
+        //When naming a directive, you must use a camel case name, w3TestDirective, but when invoking it, you must use - separated name, w3-test-directive
+        app.directive("w3TestDirective", function () {
+            return {
+                restrict: "A",
+                template: "<h1>I was made in a directive constructor!</h1>"
+            };
+
+        });
+        app.directive("editEventForm", function () {
+            return {
+                templateUrl: 'editEventForm.html'
+            }
+        });
+        app.directive("addEventForm", function () {
+            return {
+                templateUrl: 'addEventForm.html'
+            }
+        });
+
+
+
+       
+        //only valid if containes an 'e'
+        //app.directive('myFormattingDirective', function () {
+        //    return {
+        //        require: 'ngModel',
+        //        link: function (scope, element, attr, mCtrl) {
+        //            function myValidation(value) {
+        //                if (value.indexOf("e") > -1) {
+        //                    mCtrl.$setValidity('charE', true);
+        //                } else {
+        //                    mCtrl.$setValidity('charE', false);
+        //                }
+        //                return value;
+        //            }
+        //            mCtrl.$parsers.push(myValidation);
+        //        }
+        //    };
+        //});
+
+    </script>
+    <!--The ng-model directive provides CSS classes for HTML elements, depending on their status: -->
+    <style>
+        .full button span {
+            background-color: limegreen;
+            border-radius: 32px;
+            color: black;
+        }
+
+        .partially button span {
+            background-color: orange;
+            border-radius: 32px;
+            color: black;
+        }
+    </style>
+    <style>
+        input.ng-invalid {
+            background-color: pink;
+        }
+
+        input.ng-valid {
+            background-color: white;
+        }
+    </style>
+    <!--<script src="myApp.js"></script>
+    <script src="myCtrl.js"></script>-->
+</head>
+
+
+<body>
+    {{2+3}}
+
+
+    <!--
+    <p>Today's welcome message is:</p>
+    <h1>{{myWelcome}}</h1>
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $http) {
+            $http.get("welcome.htm")
+            .then(function (response) {
+                $scope.myWelcome = response.data;
+            });
+        });
+    </script>
+
+
+    -->
+    <h2>Events</h2>
+    Date:
+    <input type='text' class="form-control datepicker " id="startDate" />
+    <div data-ng-controller="EventController as eventCtrl" class="container">
+        <strong class="error">{{ error }}</strong>
+        <div id="mydiv" data-ng-show="loading">  <!--<img src="Images/482.gif" class="ajax-loader" />-->    </div>
+        {{events.length}}
+        <!--<div class="alert alert-info">
+            <p>Sort Type: {{ sortval }}</p>
+            <p>Sort Reverse: {{ sortReverse }}</p>
+            <p>Search Query: {{ searchFish }}</p>
+        </div>-->
+        <!-- sorting example https://scotch.io/tutorials/sort-and-filter-a-table-using-angular -->
+        <table ng-init="sortval='EventId'; sortReverse=false" class="table table-striped table-hover">
+            <tr>
+                <th>ItemIndex </th>
+                <th><a href="#" ng-click="sortval='EventId'; sortReverse = !sortReverse ">Event ID</a></th>
+                <th><a href="#" ng-click="sortval='EventName' ; sortReverse = !sortReverse">Name</a></th>
+                <th>Description</th>
+                <th>RegionId</th>
+                <th>Venue</th>
+                <th>Start</th>
+                <th>End</th>
+                <td colspan="2"></td>
+            </tr>
+            <tr ng-repeat="event in events | orderBy: sortval:sortReverse " ng-show="events">
+                <td>{{$index+1}}</td>
+                <td>{{event.EventId | currency}}</td>
+                <td ng-if="$odd" style="background-color:#f1f1f1">{{event.EventName}}</td>
+                <td ng-if="$even">{{event.EventName}}</td>
+                <td>{{event.EventDescription}}</td>
+                <td>{{event.EventRegionId}}</td>
+                <td>{{event.EventVenue}}</td>
+                <td>{{event.EventStart | parseDate:'MMM-dd-yyyy @ h:mm'}}</td>
+                <td>{{event.EventEnd | parseDate:'MMM-dd-yyyy @ h:mm'}}</td>
+                <td> <a data-ng-click="toggleEdit(event.EventId)" href="javascript:;" class="btn btn-sm btn-primary">Edit &times;</a> </td>
+                <td><a data-ng-click="del($index)" href="javascript:;" class="btn  btn-sm btn-primary">Delete  &times;</a> </td>
+                 <
+/tr>
+            </tr>
+
+             <
+
+        </table>
+        <button ng-click="GetAllData()" ng-hide="0">Get All Data</button>
+        <!--
+                    FILTERS
+                currency, date,
+                filter: 'i'    Filters all data CONTAINING the letter i
+                , json, limitTo, lowercase, number, orderBy, uppercase
+
+                *****Custom Filters******
+                <ul ng-app="myApp" ng-controller="namesCtrl">
+            <li ng-repeat="x in names">
+                {{x | myFormat}}
+            </li>
+        </ul>
+
+                <script>
+                        var app = angular.module('myApp', []);
+                        app.filter('myFormat', function() {
+                            return function(x) {
+                                var i, c, txt = "";
+                                for (i = 0; i < x.length; i++) {
+                                    c = x[i];
+                                    if (i % 2 == 0) {
+                                        c = c.toUpperCase();
+                                    }
+                                    txt += c;
+                                }
+                                return txt;
+                            };
+                        });
+                        app.controller('namesCtrl', function($scope) {
+                            $scope.names = ['Jani', 'Carl', 'Margareth', 'Hege', 'Joe', 'Gustav', 'Birgit', 'Mary', 'Kai'];
+                        });
+                        </script>
+
+                -->
+        <!--<form name="addevent" data-ng-show="addMode">-->
+        <div ng-show="addSuccess" class="alert alert-success" role="alert"><strong>SUCCESS!</strong> Your event was created successfully!</div>
+        <p data-ng-hide="addMode"><a data-ng-click="toggleAdd()" href="javascript:;" class="btn btn-primary">Add New</a></p>
+        <br />
+
+        <!-- https://angular-ui.github.io/bootstrap/-->
+        <div add-event-form></div>
+
+
+
+        {{ResponseDetails}}
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!--<div ng-app="thisApp" >
+        <div ng-include="'W3SchoolsSample.html'"></div>
+    </div>-->
+    <!--   <tr ng-repeat="item in items | filter:search">
+    <input type="search" ng-model="search" placeholder="Search by…">
+        <form name="products">
+            <input type="text" ng-model="item.product">
+            <input type="number" ng-model="item.amount">
+            <button ng-click="addItem()">add item</button>
+        </form>
+
+        <button class="btn btn-danger btn-small" ng-click="deleteItem($index)">
+        <i class="icon-trash icon-white"></i> remove
+    </button>
+    -->
+</body>
+</html>

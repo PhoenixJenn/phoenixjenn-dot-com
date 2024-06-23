@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+</head>
+<body>
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.controller('customersCtrl', function ($scope, $http) {
+            $http.get("http://www.w3schools.com/angular/customers_sql.aspx")
+            .then(function (response) { $scope.names = response.data.records; });
+        });
+
+    app.controller('myCtrl', function($scope) {
+        $scope.myFunc = function(myE) {
+            $scope.x = myE.clientX;
+            $scope.y = myE.clientY;
+        }
+
+    });
+    </script>
+    <div ng-app="myApp" ng-controller="customersCtrl">
+
+        <table>
+            <tr ng-repeat="x in names">
+                <td>{{ x.Name }}</td>
+                <td>{{ x.Country }}</td>
+            </tr>
+        </table>
+        <h1 ng-mousemove="myFunc($event)">Mouse Over Me!</h1>
+
+        <p>Coordinates: {{x + ', ' + y}}</p>
+    </div>
+
+    <div ng-app="" ng-init="mySwitch=true">
+
+       
+
+        <p> <button ng-disabled="mySwitch">Click Me!</button> </p>
+
+        <p><input type="checkbox" ng-model="mySwitch">Button </p>
+
+        <p>{{ mySwitch }}     </p>
+        <p ng-show="true">I am visible.</p>
+        <p ng-show="false">I am not visible.</p>
+
+        <div ng-app="" ng-init="hour=13">
+            <p ng-show="hour > 12">I am visible.</p>
+        </div>
+
+        <p ng-hide="true">I am not visible.</p>
+
+        <p ng-hide="false">I am visible.</p>
+    </div>
+
+
+    You can add AngularJS event listeners to your HTML elements by using one or more of these directives:
+
+    ng-blur
+    ng-change
+    ng-click
+    ng-copy
+    ng-cut
+    ng-dblclick
+    ng-focus
+    ng-keydown
+    ng-keypress
+    ng-keyup
+    ng-mousedown
+    ng-mouseenter
+    ng-mouseleave
+    ng-mousemove
+    ng-mouseover
+    ng-mouseup
+    ng-paste
+
+
+
+    
+
+
+
+
+    <div ng-app="myApp" ng-controller="formCtrl">
+        <form novalidate>
+            First Name:<br>
+            <input type="text" ng-model="user.firstName"><br>
+            Last Name:<br>
+            <input type="text" ng-model="user.lastName">
+            <br><br>
+            <button ng-click="reset()">RESET</button>
+        </form>
+        <p>form = {{user}}</p>
+        <p>master = {{master}}</p>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+
+    app.controller('formCtrl', function($scope) {
+        $scope.master = {firstName: "John", lastName: "Doe"};
+        $scope.reset = function() {
+            $scope.user = angular.copy($scope.master);
+        };
+        $scope.reset();
+    });
+    </script>
+</body>
+</html>

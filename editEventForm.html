@@ -1,0 +1,84 @@
+﻿
+<form name="editevent" data-ng-show="editMode">
+    
+        <h3>Edit Events</h3>
+
+
+
+    <table border="1">
+        <tr><td><label>Event ID</label></td><td><input required type="text" data-ng-model="newevent.EventId" ng-required /></td></tr>
+        <tr>
+            <td><label>Event Name</label></td>
+            <td>
+                <input type="text" name="EventName" data-ng-model="newevent.EventName" ng-required required  /> <br />
+
+                <!--<b>Invalid:</b> {{addevent.EventName.$invalid}}<br />
+                <b>$dirty:</b> {{addevent.EventName.$dirty}}<br />
+                <b>$touched:</b>  {{addevent.EventName.$touched}}-->
+            </td>
+        </tr>
+        <tr>
+            <td><label>Event Description</label></td>
+            <td>
+                <input type="text" name="EventDescription" data-ng-model="newevent.EventDescription" ng-required required /><br />
+                <b>Invalid:</b> {{addevent.EventDescription.$invalid}}<br />
+                <b>$dirty:</b> {{addevent.EventDescription.$dirty}}<br />
+                <b>$touched:</b>  {{addevent.EventDescription.$touched}}
+                <span ng-show="addevent.EventDescription.$touched && addevent.EventDescription.$invalid"> Description is required.</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Region</label></td>
+            <td>
+                <select ng-model="newevent.EventRegionId">
+                    <option ng-repeat="x in regions" value="{{x.regionId}}">{{x.regionName}}</option>
+                </select>
+            </td>
+        </tr>
+        <tr><td><label>Region</label></td><td><input required type="text" data-ng-model="newevent.EventRegionId" ng-required readonly /></td></tr>
+
+
+        <tr><td><label>Venue (room, etc)</label></td><td><input required type="text" data-ng-model="newevent.EventVenue" ng-required /></td></tr>
+        <tr><td><label>Start Date</label></td><td><input required type="text" data-ng-model="newevent.EventStart" ng-required /></td></tr>
+        <tr><td><label>End Date</label></td><td><input required type="text" data-ng-model="newevent.EventEnd" ng-required /></td></tr>
+        <tr><td><label>CreatedBy</label></td><td><input required type="text" data-ng-model="newevent.EventOrganizerId" ng-required /></td></tr>
+
+
+        <table class="table table-bordered table-hover" style="width: 800px" border="1">
+            <tr>
+                <th>#ID</th>
+                <th>Name</th>
+                <th>Venue</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="text" data-ng-model="search.EventName" />
+                </td>
+                <td>
+                    <input type="text" data-ng-model="search.EventVenue" />
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr data-ng-repeat="event in events | filter:search">
+                <td><strong data-ng-hide="event.editMode">{{ event.EventId }}</strong></td>
+                <td>
+                    <p data-ng-hide="event.editMode">{{ event.EventName, e }}</p>
+                    <p data-ng-show="event.editMode">
+                        <input type="text" data-ng-model="event.EventName" />
+                    </p>
+                </td>
+                <td>
+                    <p data-ng-hide="event.editMode">{{ event.Venue }}</p>
+                    <input data-ng-show="event.editMode" type="text" data-ng-model="event.eventVenue" />
+                </td>
+                <td>
+                    <p data-ng-hide="event.editMode"><a data-ng-click="toggleEdit(event)" href="javascript:;">Edit</a> | <a data-ng-click="delevent(event)" href="javascript:;">Delete</a></p>
+                    <p data-ng-show="event.editMode"><a data-ng-click="save(event)" href="javascript:;">Save</a> | <a data-ng-click="toggleEdit(event)" href="javascript:;">Cancel</a></p>
+                </td>
+            </tr>
+        </table>
+</form>

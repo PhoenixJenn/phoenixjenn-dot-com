@@ -1,0 +1,121 @@
+﻿<!--http://stackoverflow.com/questions/21107396/scrollspy-using-full-url-->
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header" ">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html#"><span class="icon icon-fire "></span>LOGO</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <!--<li><a href="#section1">Nerd</a></li>-->
+                    <!-- Preserve traditional anchor behavior with ng-include is a nightmare. ng-include requires $anchorScroll, and $anchorScroll requires $location. As long as $location is involved, it changes the normal hash to angular hash -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html##">Nerd <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="#section42">xyz</a></li>
+                            <li><a href="#foreword"><span class="glyphicon glyphicon-education"></span>Education</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-file"></span>Resume</a></li>
+                            <li class="divider"></li>
+
+                            <li><a href="#/#"><span class="glyphicon glyphicon-link"></span>Links</a></li>
+                            <li><a href="#/#"><span class="glyphicon glyphicon-film"></span>TV/Movies</a></li>
+                            <li><a href="#/#"><span class="glyphicon glyphicon-book"></span>Books</a></li>
+
+                            <li><a href="#/#"><span class="glyphicon glyphicon-calendar"></span>Events</a></li>
+                            <li><a href="#/#"><span class="glyphicon glyphicon-map-marker"></span>Travel</a></li>
+
+                        </ul>
+                    </li>
+
+                    <!--<li><a href="#section2">Athlete</a></li>-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="athlete.html#/#">Athlete <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="athlete.html#/#races"><span class="icon icon-music"></span>Races</a></li>
+                            <li><a href="athlete.html#education"  data-target="education"><span class="glyphicon glyphicon-education"></span>Education</a></li>
+                            <li class="divider"></li>
+                            
+                            <li><a href="#/#"><span class="glyphicon glyphicon-link"></span>Links</a></li>
+                            <li><a href="#/#"><span class="glyphicon glyphicon-film"></span>TV/Movies</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-book"></span>Books</a></li>
+
+                            <li><a href="#"><span class="glyphicon glyphicon-calendar"></span>Events</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span>Travel</a></li>
+
+                        </ul>
+                    </li>
+
+                    <!--<li><a href="#section3">Creative</a></li>-->
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="creative.html" > Creative <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="creative.html#/#comicon" data-target="comicon">Comic Con</a></li>
+                            <li><a href="index.html##section41"  data-target="#section41"><span class="icon icon-paint-format"></span>Paintings</a></li>
+                            <li><a href="index.html##section41"  data-target="#section41">Jewelry</a></li>
+                            <li><a href="index.html##section42"  data-target="#section42">Cooking/Baking</a></li>
+                            <li class="divider"></li>
+
+                            <li><a href="#"><span class="glyphicon glyphicon-link"></span>Links</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-film"></span>TV/Movies</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-book"></span>Books</a></li>
+
+                            <li><a href="#"><span class="glyphicon glyphicon-calendar"></span>Events</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span>Travel</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-education"></span>Education</a></li>
+                        </ul>
+                    </li>
+                    <!--<li class="dropdown">
+                    <div class="btn-group navbar-btn nav navbar-nav">
+                        <button class="btn">Action</button>
+                        <button data-toggle="dropdown" class="btn  dropdown-toggle"><span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section41">Action</a></li>
+                            <li><a href="#section42">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div></li>-->
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#/#">Playground <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section41">Section A</a></li>
+                            <li><a href="#section42">Section B</a></li>
+                            <li class="divider"></li>
+
+                            <li><a href="#"><span class="glyphicon glyphicon-list"></span> My Lists</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-film"></span>TV/Movies</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-book"></span>Books</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-headphones"></span>Playlists</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Events</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span>Travel</a></li>
+                            <li><a href="#"><span class="icon icon-github"></span>GitHub</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--http://getbootstrap.com/components/-->
+                    
+
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-pencil"></span>Contact</a></li>
+                    <li><a href="#"><span class="icon icon-facebook"></span></a></li>
+                    <li><a href="#"><span class="icon icon-linkedin2"></span> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

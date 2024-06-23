@@ -1,0 +1,141 @@
+﻿
+http://bv.doc.javake.cn/examples/
+
+
+
+<form name="addevent" data-ng-show="addMode"  >
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3 class="panel-title">Add Event</h3></div>
+        <div class="panel-body">
+            <table border="1" class="table table-condensed">
+                <tr><td><label>Event ID</label></td><td><input required type="text" data-ng-model="newevent.EventId" ng-required /></td></tr>
+                <tr>
+                    <td><label>Event Name</label></td>
+                    <td>
+                        <input type="text" class="form-control"
+                               name="EventName"
+                               data-ng-model="newevent.EventName"
+                               ng-required required
+                               placeholder="Event Name" /><br />my-formatting-directive
+
+                        <b>Invalid:</b> {{addevent.EventName.$invalid}}<br />
+                        <b>$dirty:</b> {{addevent.EventName.$dirty}}<br />
+                        <b>$touched:</b>  {{addevent.EventName.$touched}}
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Event Description</label></td>
+                    <td>
+                        <input type="text" class="form-control" name="EventDescription" data-ng-model="newevent.EventDescription" ng-required required /><br />
+                        <b>Invalid:</b> {{addevent.EventDescription.$invalid}}<br />
+                        <b>$dirty:</b> {{addevent.EventDescription.$dirty}}<br />
+                        <b>$touched:</b>  {{addevent.EventDescription.$touched}}
+                        <span ng-show="addevent.EventDescription.$touched && addevent.EventDescription.$invalid"> Description is required.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Region</label></td>
+                    <td>
+                        <!--<select data-ng-model="newevent.EventRegionId">
+                            <option ng-repeat="x in regions" value="{{x.regionId}}">{{x.regionName}} - {{x.regionId}}-</option>
+                        </select>-->
+
+                        <label ng-repeat="x in regions">
+                            &nbsp;<input type="checkbox" class="checkbox-inline no_indent" data-ng-model="newevent.EventRegionId" checklist-value="x.regionId"> {{x.regionName}}
+                        </label>
+                    </td>
+                </tr>
+
+
+                <tr><td><label>Venue (room, etc)</label></td><td><input required type="text" data-ng-model="newevent.EventVenue" ng-required /></td></tr>
+                <tr>
+                    <td><label>Start Date</label></td>
+                    <td>
+
+                        <!--<datepicker ng-model="newevent.EventStart" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>-->
+                        <p></p>
+
+                        <input required type="text" data-ng-model="newevent.EventStart" ng-required />
+
+                        <!--<input type='text' class="form-control datepicker " id="startDate" />-->
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>End Date</label></td>
+                    <td>
+                        <input required type="text" data-ng-model="newevent.EventEnd" ng-required />
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+                        <h4>Popup</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="input-group">
+                                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="col-md-6">
+                                <p class="input-group">
+                                    <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Format: <span class="muted-text">(manual alternate <em>{{altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+                            </div>
+                        </div>
+
+                        <hr />
+                        <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+                        <button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>
+                        <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+                        <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>
+        </div>
+
+        </td></tr>
+
+
+        <tr><td><label>CreatedBy</label></td><td><input required type="text" data-ng-model="newevent.EventOrganizerId" ng-required /></td></tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input name="myInput" ng-model="myInput" type="email"><b>{{addevent.myInput.$valid}}</b>
+                <span ng-show="addevent.myInput.$error.required">Email is required.</span>
+                <span ng-show="addevent.myInput.$error.email">Invalid email address.</span>
+            </td>
+        </tr>
+        </table>
+
+    </div>
+        <!--  <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span> -->
+        <!--
+                          $scope.x2 = angular.isNumber($scope.x1);
+
+                              Pick a topic:
+                      <input type="radio" ng-model="myVar" value="dogs">Dogs
+                      <input type="radio" ng-model="myVar" value="tuts">Tutorials
+                      <input type="radio" ng-model="myVar" value="cars">Cars
+
+                      <input type="submit"
+        ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+        myForm.email.$dirty && myForm.email.$invalid">
+                              -->
+        <input class="btn btn-primary" type="submit" value="Add" data-ng-click="add()" data-ng-disabled="!addevent.$valid" />
+        <input class="btn btn-primary" type="button" value="Cancel" data-ng-click="toggleAdd()" />
+
+    </div>
+
+
+</form>

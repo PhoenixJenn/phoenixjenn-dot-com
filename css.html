@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <style>
+     /* This is a single-line comment */
+   h2, p {
+    text-align: center;
+    color: red;
+    background-color: yellow;
+    border: 1px solid black;
+    /*margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;*/
+}
+h1 {
+    letter-spacing: 3px;
+    word-spacing: 10px;
+}
+body {
+    background-color: lightblue;
+    background-image: url("paper.gif");
+    background-repeat: repeat-x;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+div {
+    background-color: lightblue;
+     max-width: 500px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+       
+
+#para1 {
+    text-align: center;
+    color: red;
+    text-align: center;
+    text-decoration: line-through;
+    text-indent: 50px;
+}
+.center {
+    text-align: center;
+    color: red;
+}
+
+p.one {
+    outline-style: double;
+    outline-color: red;
+    outline-width: thick;
+}
+
+p.two {
+    outline-style: double;
+    outline-color: green;
+    outline-width: 3px;
+}
+        p.center {
+        text-align: center;
+    color: red;
+        }
+
+
+        p.dotted {border-style: dotted;
+        margin-left: inherit;
+
+        }
+
+        p.small {
+    line-height: 0.8;
+}
+
+p.big {
+    line-height: 1.8;
+}
+
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid; border-color: red;}
+p.double {border-style: double; border-color: green;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;  border-color: red green blue yellow;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+
+p.uppercase {
+    text-transform: uppercase;
+}
+
+p.lowercase {
+    text-transform: lowercase;
+}
+
+p.capitalize {
+    text-transform: capitalize;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+} 
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+/* display: inline; for li will make a horizontal bar; block makes for vertical */
+li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+     width: 100px;
+    border-bottom: 1px solid #555;
+}
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+a:link, a:visited {
+   
+   
+    text-align: center;
+   
+     
+}
+li:last-child {
+    border-bottom: none;
+}
+
+
+tr:nth-child(even) {background-color: #f2f2f2}
+tr:hover {background-color: #f5f5f5}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+    </style>
+
+</head>
+<body>
+
+    <ul>
+        <li><a class="active"  href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <p>A background color is added to the links to show the link area.</p>
+    <p>Notice that the whole link area is clickable, not just the text.</p>
+    <div style="overflow-x:auto;">
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+        </tr>
+        </table>
+    </div>
+        elements, ids (hashtag), classes (dot)
+        <br />
+        <a href="default.asp" target="_blank">This is a link</a>
+        Styles cascade: Inline style (inside an HTML element),
+        External and internal style sheets (in the head section),
+        Browser default
+        <h2>The border-style Property</h2>
+        <p>This property specifies what kind of border to display:</p>
+
+        <p class="dotted">A dotted border.</p>
+        <p class="dashed">A dashed border.</p>
+        <p class="solid">A solid border.</p>
+        <p class="double">A double border.</p>
+        <p class="groove">A groove border.</p>
+        <p class="ridge">A ridge border.</p>
+        <p class="inset">An inset border.</p>
+        <p class="outset">An outset border.</p>
+        <p class="none">No border.</p>
+        <p class="hidden">A hidden border.</p>
+        <p class="mix">A mixed border.</p>
+
+</body>
+</html>

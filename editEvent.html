@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html ng-app="eventCRUDModule">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="Scripts/angular.js" ></script>
+    <script type="text/javascript" src="Scripts/event.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="Scripts/app.js"></script>
+    <script type="text/javascript" src="Scripts/controllers.js"></script>
+    <script type="text/javascript" src="Scripts/services.js"></script>
+    <script type="text/javascript" src="Scripts/angular-route.js"></script>
+    <script type="text/javascript" src="Scripts/angular-resource.min.js"></script>
+</head>
+<body ng-controller="eventController as eventCtrl">
+    {{2+3}}
+
+
+    <h2>Events</h2>
+    @{ViewBag.Title = "EventView";}
+    <!--http://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/-->
+    <div class="container">
+
+        <strong class="error">{{error}}</strong>
+
+        <div id="mydiv" data-ng-show="loading"><img class="ajax-loader" src="https://lh6.googleusercontent.com/-C5F73gXUSKc/VF_PE4bXXuI/AAAAAAAAAHs/dxOQiUahfFU/s2048/ajax-loader.gif" alt="" /></div>
+        <p data-ng-hide="addMode"><a class="btn btn-primary" data-ng-click="toggleAdd();">Add New</a></p>
+
+        <form name="addevent" data-ng-show="addMode">
+
+
+
+            <label>Event Name</label><input required type="text" data-ng-model="newevent.EventName" />
+            <label>Venue:</label><input required type="text" data-ng-model="newevent.Venue" />
+
+
+            <table>
+                <tbody>
+                    <tr><th>Event Name</th><th>Event Venue</th></tr>
+                </tbody>
+            </table>
+            <input class="btn btn-primary" type="submit" value="Add" data-ng-click="add()" data-ng-disabled="!addevent.$valid" />
+            <input class="btn btn-primary" type="button" value="Cancel" data-ng-click="toggleAdd()" />
+        </form>
+
+
+        <p data-ng-hide="event.editMode">{{ event.EventName }}</p>
+        <input type="text" data-ng-show="event.editMode" data-ng-model="event.FullName" />
+        <p data-ng-hide="event.editMode">{{ event.Address }}</p>
+        <input type="text" data-ng-show="event.editMode" data-ng-model="event.Address" />
+        <p data-ng-hide="event.editMode">{{ event.Course }}</p>
+
+        <p data-ng-hide="event.editMode"><a data-ng-click="toggleEdit(event)">Edit</a> | <a data-ng-click="deleteevent(event)">Delete</a></p>
+        <p data-ng-show="event.editMode"><a data-ng-click="toggleEdit(event);save(event)">Save</a> | <a data-ng-click="toggleEdit(event)">Cancel</a></p>
+
+        Event Name Event Venue
+        <table class="table table-bordered table-hover" style="width: 800px;">
+            <tbody>
+                <tr>
+                    <th>Id Number</th>
+                </tr>
+                <tr>
+                    <td><strong data-ng-hide="event.editMode">{{ event.EventId }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+
+
+    </div>
+</body>
+</html>

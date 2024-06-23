@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://maps.googleapis.com/maps/api/js">
+    </script>
+
+    <script>
+function initialize()
+{
+  var mapProp = {
+    center: new google.maps.LatLng(51.508742,-0.120850),
+    zoom:9,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var mapProp2 = {
+    center: new google.maps.LatLng(51.508742,-0.120850),
+    zoom:9,
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+  var mapProp3 = {
+    center: new google.maps.LatLng(51.508742,-0.120850),
+    zoom:9,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  };
+  var mapProp4 = {
+    center: new google.maps.LatLng(51.508742,-0.120850),
+    zoom:9,
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  var map2 = new google.maps.Map(document.getElementById("googleMap2"),mapProp2);
+  var map3 = new google.maps.Map(document.getElementById("googleMap3"),mapProp3);
+  var map4 = new google.maps.Map(document.getElementById("googleMap4"),mapProp4);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body>How to get coordinates
+
+    Google provides a Geocoding Web Service which should do what you're looking for. You will be able to do geocoding on your server.
+
+    JSON Example:
+
+    http://maps.google.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&sensor=false
+    <br/>https://developers.google.com/maps/documentation/geocoding/start?csw=1
+    <br/>
+    <br />  http://www.gps-coordinates.net/
+    <br />  https://support.google.com/maps/answer/18539?co=GENIE.Platform%3DDesktop&hl=en
+    <br />Documentation: http://www.w3schools.com/googleapi/google_maps_ref.asp
+    <br/>
+    https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
+    <pre>
+
+            Below is a sample geocoding response, in JSON:
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "1600",
+               "short_name" : "1600",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Amphitheatre Pkwy",
+               "short_name" : "Amphitheatre Pkwy",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Mountain View",
+               "short_name" : "Mountain View",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Santa Clara County",
+               "short_name" : "Santa Clara County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "California",
+               "short_name" : "CA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "94043",
+               "short_name" : "94043",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+         "geometry" : {
+            "location" : {
+               "lat" : 37.4224764,
+               "lng" : -122.0842499
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 37.4238253802915,
+                  "lng" : -122.0829009197085
+               },
+               "southwest" : {
+                  "lat" : 37.4211274197085,
+                  "lng" : -122.0855988802915
+               }
+            }
+         },
+         "place_id" : "ChIJ2eUgeAK6j4ARbn5u_wAGqWA",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+    </pre>
+
+    <div id="googleMap" style="width:400px;height:300px;"></div>
+    <br>
+    <div id="googleMap2" style="width:400px;height:300px;"></div>
+    <br>
+    <div id="googleMap3" style="width:400px;height:300px;"></div>
+    <br>
+    <div id="googleMap4" style="width:400px;height:300px;"></div>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <title>P H O E N I X J E N N</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="bootstrap3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="glyphs.css" rel="stylesheet" type="text/css">
+    <link href="Hover-master/css/hover-min.css" rel="stylesheet" />
+    <link href="phoenixjenn.css" rel="stylesheet" />
+    <link href="hover.css" rel="stylesheet" />
+
+
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+    <script type="text/javascript" src="/Scripts/angular-animate.js"></script>
+    <script type="text/javascript" src="Scripts/mainapp.js"></script>
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+
+    <script src="bootstrap3.3.6/js/bootstrap.min.js"></script>
+    <script src="Scripts/ui-bootstrap-tpls-1.3.3.min.js"></script>
+
+
+    <style>
+      #races {
+            padding-top: 10px;
+            height: 800px;
+            color: black;
+            background-color: #ffffff;
+        }
+
+      #education {
+            padding-top: 50px;
+            height: 700px;
+            color: black;
+            background-color: #808080;
+        }
+
+    </style>
+</head>
+ 
+<body data-spy="scroll" data-target=".navbar" data-offset="50" id="myPage" ng-app="pjApp">
+    <div ng-include="'nav.html'"></div>
+
+    <div class="jumbotron text-center comicpanel" style="background-color:black;">
+        <img src="images/athlete.png" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+
+
+    <style>
+        .raceswrapper {
+         position: relative;
+    
+    box-shadow: 0 3px 5px rgba(0,0,0,.4) , 0 -3px 5px rgba(0,0,0,.4);
+        }
+    .races{
+    list-style:none;
+    overflow:hidden;
+    margin:0;padding:0;
+    list-style-image:none;
+    display:block;
+    vertical-align:baseline;
+    width:700px;
+
+    }
+    li.races-row {
+   
+    float: left;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 99;
+}
+    </style>
+
+    <div id="races" class="container-fluid">
+       
+        <h1> Races</h1>
+
+            <div ng-controller="racesController"   > <!--id="slides_control" raceswrapper-->
+                <div class="row"><div class="col-sm-2">runDisney</div><div class="col-sm-2">Rock & Roll</div><div class="col-sm-3">BAA</div><div class="col-sm-2"></div></div>
+                <!--<ul ng-repeat="race in races" class="races">
+                    <li class="races-row">{{ race.name + ', ' + race.raceseries }}</li>
+                </ul>-->
+               
+                <!--https://mixitup.kunkalabs.com/-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <table ng-init="sortval='EventId'; sortReverse=false" class="raceswrapper races table table-striped table-hover">
+                            <tr>
+                                <th>ItemIndex </th>
+                                <th><a href="#" ng-click="sortval='name'; sortReverse = !sortReverse ">Name</a></th>
+                                <th><a href="#" ng-click="sortval='raceseries' ; sortReverse = !sortReverse">Series</a></th>
+                                <th><a href="#" ng-click="sortval='racedate' ; sortReverse = !sortReverse">Date</a></th>
+                                <th>Location</th>
+                                <th>Distance</th>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr ng-repeat="race in races | orderBy: sortval:sortReverse " ng-show="races">
+                                <td>{{$index+1}}</td>
+                                <td ng-if="$odd" style="background-color:#f1f1f1">{{race.name  }}</td>
+                                <td ng-if="$even">{{race.name }}</td>
+                                <td>{{race.raceseries}}</td>
+                                <td>{{race.racedate}}</td>
+                                <td>{{race.racelocation}}</td>
+                                <td>{{race.racedistance}}</td>
+
+                                <!--<td> <a data-ng-click="toggleEdit(event.EventId)" href="javascript:;" class="btn btn-sm btn-primary">Edit &times;</a> </td>
+                <td><a data-ng-click="del($index)" href="javascript:;" class="btn  btn-sm btn-primary">Delete  &times;</a> </td>-->
+                            </tr>
+
+                        </table>
+                        </div>
+                    <div class="col-md-6">
+                    <div class="raceswrapper"><span ng-model="race.racedate"></span><span ng-model="race.racemonth"></span></div>
+                        
+
+                    </div>
+                    </div>
+
+            </div>
+       
+         
+       
+
+    </div>
+
+
+    <div id="education" class="container-fluid" name="section42">
+        <h3>Education</h3>
+        <div class="row">
+            <div class="col-sm-3">
+                <span class="glyphicon glyphicon-education logo slideanim"></span>
+            </div>
+            <div class="col-sm-9">
+                <h3>MS, Sport Psychology/Exercise Science</h3>
+                <h4><strong> :</strong>California University of Pennsylvania (CALU)</h4>
+                <br>
+                <p>
+                    <strong>Course Highlights:</strong>
+                    <ul>
+                        <li>Essentials of Human Movement Science (Kinesiology)</li>
+                        <li>Anatomy</li>
+                        <li>Exercise Physiology</li>
+                        <li>Nutrition for Peak Performance</li>
+                        <li>Psychological Aspects of Sport Injury and Rehabilitation</li>
+                        <li>Research in Sport Pychology</li>
+                    </ul>
+                    <strong>Papers:</strong>"Food, Exercise and the Effect on Negative Affect"
+                </p>
+                <h3>Certifications</h3>
+                <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>Certified Personal Trainer, National Academy of Sports Medicine (NASM)</h5>
+                <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>Certified Personal Trainer, American Council on Exercise (ACE)</h5>
+                <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>Certified Nutrition Coach, Precision Nutrition (PN)</h5>
+                <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>Spinning Instructor, Mad Dogg Athletics</h5>
+                <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>Indoor Cycling Instructor, Schwinn</h5>
+                <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>Group Kick Instructor, Body Training Systems</h5>
+                <h5><span class="glyphicon glyphicon-star logo-tiny"> </span>Group Groove Instructor, Body Training Systems</h5>
+            </div>
+        </div>
+    </div>
+    <script src="footer.js" type="text/javascript"></script>
+</body>
+
+</html>

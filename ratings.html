@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="bootstrap3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap3.3.6/css/bootstrap.min.css" />
+
+</head>
+<body>
+    <fieldset class="rating">
+        <legend>Please rate:</legend>
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+    </fieldset>
+
+    <style>
+        .wrapper {
+            position: relative;
+        }
+
+            .wrapper .glyphicon {
+                position: absolute;
+                top: 20px;
+                left: 40px;
+            }
+    </style>
+
+
+    <div class="wrapper">
+        Some Text Here Some Text Here<span class="glyphicon glyphicon-star">There Some Text Here Some Text Here</span>
+        <div>
+
+
+            <style>
+                @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+            </style>
+            <div class="container">
+                <div class="row">
+                    <h2>Thanks @Maks for this snippet ! - With working FontAwesome Stars - <a href="http://twitter.com/AlexMahrt" target="_blank">@AlexMahrt on Twitter</a><br><small>Hover and click on a star</small></h2>
+                </div>
+                <div class="row lead">
+                    <div id="stars" class="starrr"></div>
+                    You gave a rating of <span id="count">0</span> star(s)
+                </div>
+
+                <div class="row lead">
+                    <p>Also you can give a default rating by adding attribute data-rating</p>
+                    <div id="stars-existing" class="starrr" data-rating='4'></div>
+                    You gave a rating of <span id="count-existing">4</span> star(s)
+                </div>
+            </div>
+            <script>
+                //Font Awesome Star Ratings"                 Bootstrap 3.2.0 Snippet by Cyruxx
+                // Starrr plugin (https://github.com/dobtco/starrr)
+                var __slice = [].slice;
+
+                (function ($, window) {
+                    var Starrr;
+
+                    Starrr = (function () {
+                        Starrr.prototype.defaults = {
+                            rating: void 0,
+                            numStars: 5,
+                            change: function (e, value) { }
+                        };
+
+                        function Starrr($el, options) {
+                            var i, _, _ref,
+                            _this = this;
+
+                            this.options = $.extend({}, this.defaults, options);
+                            this.$el = $el;
+                            _ref = this.defaults;
+                            for (i in _ref) {
+                                _ = _ref[i];
+                                if (this.$el.data(i) != null) {
+                                    this.options[i] = this.$el.data(i);
+                                }
+                            }
+                            this.createStars();
+                            this.syncRating();
+                            this.$el.on('mouseover.starrr', 'i', function (e) {
+                                return _this.syncRating(_this.$el.find('i').index(e.currentTarget) + 1);
+                            });
+                            this.$el.on('mouseout.starrr', function () {
+                                return _this.syncRating();
+                            });
+                            this.$el.on('click.starrr', 'i', function (e) {
+                                return _this.setRating(_this.$el.find('i').index(e.currentTarget) + 1);
+                            });
+                            this.$el.on('starrr:change', this.options.change);
+                        }
+
+                        Starrr.prototype.createStars = function () {
+                            var _i, _ref, _results;
+
+                            _results = [];
+                            for (_i = 1, _ref = this.options.numStars; 1 <= _ref ? _i <= _ref : _i >= _ref; 1 <= _ref ? _i++ : _i--) {
+                                _results.push(this.$el.append("<i class='fa fa-star-o'></i>"));
+                            }
+                            return _results;
+                        };
+
+                        Starrr.prototype.setRating = function (rating) {
+                            if (this.options.rating === rating) {
+                                rating = void 0;
+                            }
+                            this.options.rating = rating;
+                            this.syncRating();
+                            return this.$el.trigger('starrr:change', rating);
+                        };
+
+                        Starrr.prototype.syncRating = function (rating) {
+                            var i, _i, _j, _ref;
+
+                            rating || (rating = this.options.rating);
+                            if (rating) {
+                                for (i = _i = 0, _ref = rating - 1; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+                                    this.$el.find('i').eq(i).removeClass('fa-star-o').addClass('fa-star');
+                                }
+                            }
+                            if (rating && rating < 5) {
+                                for (i = _j = rating; rating <= 4 ? _j <= 4 : _j >= 4; i = rating <= 4 ? ++_j : --_j) {
+                                    this.$el.find('i').eq(i).removeClass('fa-star').addClass('fa-star-o');
+                                }
+                            }
+                            if (!rating) {
+                                return this.$el.find('i').removeClass('fa-star').addClass('fa-star-o');
+                            }
+                        };
+
+                        return Starrr;
+
+                    })();
+                    return $.fn.extend({
+                        starrr: function () {
+                            var args, option;
+
+                            option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+                            return this.each(function () {
+                                var data;
+
+                                data = $(this).data('star-rating');
+                                if (!data) {
+                                    $(this).data('star-rating', (data = new Starrr($(this), option)));
+                                }
+                                if (typeof option === 'string') {
+                                    return data[option].apply(data, args);
+                                }
+                            });
+                        }
+                    });
+                })(window.jQuery, window);
+
+                $(function () {
+                    return $(".starrr").starrr();
+                });
+
+                $(document).ready(function () {
+
+                    $('#stars').on('starrr:change', function (e, value) {
+                        $('#count').html(value);
+                    });
+
+                    $('#stars-existing').on('starrr:change', function (e, value) {
+                        $('#count-existing').html(value);
+                    });
+                });
+
+            </script>
+</body>
+</html>

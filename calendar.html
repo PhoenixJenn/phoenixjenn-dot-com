@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html ng-app="mwl.calendar.docs">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script type="text/javascript" src="Scripts/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+    <script type="text/javascript" src="Bootstrap/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="moment-develop/min/moment.min.js"></script>
+    <script type="text/javascript" src="Scripts/interact.min.js"></script>
+
+    <script type="text/javascript" src="Scripts/angular-animate.js"></script>
+    <script type="text/javascript" src="Scripts/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="angular-bootstrap-calendar-master/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>
+
+    <!--<script type="text/javascript" src="Bootstrap/bootstrap-3.3.6-dist/js/transition.js"></script>-->
+    <!--<script type="text/javascript" src="Bootstrap/bootstrap-3.3.6-dist/js/collapse.js"></script>-->
+    <!--<script type="text/javascript" src="bower_components/jquery/src/jquery.js"></script>-->
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap-datetimepicker.min.js"></script>
+
+    <script type="text/javascript" src="Scripts/example.js"></script>
+    <script type="text/javascript" src="Scripts/helpers.js"></script>
+
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//mattlewis92.github.io/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="Content/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Bootstrap/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">
+    <!--
+
+    Documentation: https://github.com/mattlewis92/angular-bootstrap-calendar
+    -->
+
+
+
+</head>
+<body>
+    <!-- https://github.com/moment/moment-->
+    <!--https://mattlewis92.github.io/angular-bootstrap-calendar/#?example=recurring-events -->
+    <!-- -->
+
+    <div ng-controller="KitchenSinkCtrl as vm">
+        <h2 class="text-center">{{ vm.calendarTitle }}</h2>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <div class="btn-group">
+                    <button class="btn btn-primary"
+                            mwl-date-modifier
+                            date="vm.viewDate"
+                            decrement="vm.calendarView">
+                        Previous
+                    </button>
+                    <button class="btn btn-default"
+                            mwl-date-modifier
+                            date="vm.viewDate"
+                            set-to-today>
+                        Today
+                    </button>
+                    <button class="btn btn-primary"
+                            mwl-date-modifier
+                            date="vm.viewDate"
+                            increment="vm.calendarView">
+                        Next
+                    </button>
+                </div>
+            </div>
+            <br class="visible-xs visible-sm">
+            <div class="col-md-6 text-center">
+                <div class="btn-group">
+                    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'year'">Year</label>
+                    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'">Month</label>
+                    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'">Week</label>
+                    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'">Day</label>
+                </div>
+            </div>
+        </div>
+        <br>
+        <mwl-calendar events="vm.events"
+                      view="vm.calendarView"
+                      view-title="vm.calendarTitle"
+                      view-date="vm.viewDate"
+                      on-event-click="vm.eventClicked(calendarEvent)"
+                      on-event-times-changed="vm.eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+                      edit-event-html="'<i class=\'glyphicon glyphicon-pencil\'></i>'"
+                      delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
+                      on-edit-event-click="vm.eventEdited(calendarEvent)"
+                      on-delete-event-click="vm.eventDeleted(calendarEvent)"
+                      cell-is-open="vm.isCellOpen"
+                      day-view-start="06:00"
+                      day-view-end="22:00"
+                      day-view-split="30"
+                      cell-modifier="vm.modifyCell(calendarCell)">
+        </mwl-calendar>
+        <br><br><br>
+        <h3 id="event-editor">
+            Edit events
+            <button class="btn btn-primary pull-right"
+                    ng-click="vm.events.push({title: 'New event', type: 'important', draggable: true, resizable: true})">
+                Add new
+            </button>
+            <div class="clearfix"></div>
+        </h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Starts at</th>
+                    <th>Ends at</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="event in vm.events track by $index">
+                    <td>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="event.title">
+                    </td>
+                    <td>
+                        <select ng-model="event.type" class="form-control">
+                            <option value="important">Important</option>
+                            <option value="warning">Warning</option>
+                            <option value="info">Info</option>
+                            <option value="inverse">Inverse</option>
+                            <option value="success">Success</option>
+                            <option value="special">Special</option>
+                        </select>
+                    </td>
+                    <td>
+                        <p class="input-group" style="max-width: 250px">
+                            <input type="text"
+                                   class="form-control"
+                                   readonly
+                                   uib-datepicker-popup="dd MMMM yyyy"
+                                   ng-model="event.startsAt"
+                                   is-open="event.startOpen"
+                                   close-text="Close">
+                            <span class="input-group-btn">
+                                <button type="button"
+                                        class="btn btn-default"
+                                        ng-click="vm.toggle($event, 'startOpen', event)">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                        </p>
+                        <uib-timepicker ng-model="event.startsAt"
+                                        hour-step="1"
+                                        minute-step="15"
+                                        show-meridian="true">
+                        </uib-timepicker>
+                    </td>
+                    <td>
+                        <p class="input-group" style="max-width: 250px">
+                            <input type="text"
+                                   class="form-control"
+                                   readonly
+                                   uib-datepicker-popup="dd MMMM yyyy"
+                                   ng-model="event.endsAt"
+                                   is-open="event.endOpen"
+                                   close-text="Close">
+                            <span class="input-group-btn">
+                                <button type="button"
+                                        class="btn btn-default"
+                                        ng-click="vm.toggle($event, 'endOpen', event)">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                        </p>
+                        <uib-timepicker ng-model="event.endsAt"
+                                        hour-step="1"
+                                        minute-step="15"
+                                        show-meridian="true">
+                        </uib-timepicker>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger"
+                                ng-click="vm.events.splice($index, 1)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--
+
+    HOw to fix the vertical alignment
+    http://bootstrap-calendar.azurewebsites.net/
+
+
+    Did something today that could help. Even tough I hate using 'em. I decided to approach the problem using tables
+
+This is my code in week.html:
+<table class="cal-week-box" style="width:100%">
+<thead><tr>
+<% _.each(days_name, function(name) { %>
+<td class="&lt;%= cal._getDayClass('week', start) %&gt;" data-toggle="tooltip" title="&lt;%= cal._getHolidayName(start) %&gt;"><%= name %>
+
+<small><%= start.getDate() %> <%= cal.locale['ms' + start.getMonth()] %></small>
+</td>
+<% start.setDate(start.getDate() + 1); %>
+<% }) %>
+</tr></thead>
+<tbody><tr><%= cal._week() %></tr></tbody>
+</table>
+
+And my code in week-days.html:
+<td><table>
+<% start_of_day = 0; %>
+<% _.each(events, function(event){ %>
+<% if(event.start_day != 0 && event.start_day != start_of_day){ %>
+</table></td><td><table>
+<% } %>
+<% start_of_day = event.start_day; %>
+<tr>
+<td class=" cal-offset&lt;%= event.start_day %&gt; day-highlight dh-&lt;%= event['class'] %&gt;" data-event-class="&lt;%= event['class'] %&gt;">
+<%= event.title %>
+</td>
+</tr>
+<% }); %>
+</table></td>
+
+The display will turn out shitty if you don't adjust the .css afterwards. I am not an expert but here is a couple of styles you will need to add in calendar.css:
+.cal-week-box thead{text-align:center;}
+.cal-week-box tbody table{border-collapse: separate;border-spacing: 2px;}
+.cal-week-box tbody table tr td a{
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+width: 90%;
+padding-right: 10px;
+display: block;
+padding-left: 5px;
+line-height: 30px;
+}
+And you will need to modify at line 209 the following class: 
+.cal-week-box [data-event-class] {
+white-space: nowrap;
+height: 30px;
+margin: 1px 1px;
+line-height: 30px;
+text-overflow: ellipsis;
+overflow: hidden;
+padding-left: 10px;
+}
+
+to:
+
+.cal-week-box [data-event-class] {height: 20px;max-width: 134px;}
+    -->
+</body>
+</html>
