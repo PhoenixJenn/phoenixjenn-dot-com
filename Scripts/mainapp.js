@@ -45,7 +45,7 @@ myApp.controller('racesController', ['$scope', function ($scope) {
           },
            {
                name: 'Halloween 5k Trail Run', racedate: '2014', racelocation: 'Orlando', raceseries: 'runDisney', racename: '',
-               racedistance: '3.1', racetype: '5k', racemedal: 'HauntedTrailRun5k2014.jpg', racemonth: 'Oct'
+               racedistance: '3.1', racetype: '5k', racemedal: 'HauntedTrailRun5K2014.jpg', racemonth: 'Oct'
            },
          {
              name: 'Tower of Terror 10M', racedate: '2014', racelocation: 'Orlando', raceseries: 'runDisney', racename: 'Tower of Terror',
