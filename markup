@@ -1,0 +1,1075 @@
+
+
+<html >
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>How to be an Awesome Colleague</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>How to be an Awesome Colleague</h1>
+    <div class=3D"Section1">
+        <div class=3D"contentLayout2">
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><br></p>
+<p><strong>Inclusivity Terminology </strong>(<a href=3D"https://amazondei.n=
+a.lego.a2z.com/all-learning-and-support/inclusive-terminology" class=3D"ext=
+ernal-link" rel=3D"nofollow">here</a>)</p>
+<p><strong>How to ask Questions</strong> (borrowed from <a href=3D"https://=
+w.amazon.com/bin/view/HowToAskQuestionsTheAmazonWay" class=3D"external-link=
+" rel=3D"nofollow">here</a>)</p>
+<div id=3D"expander-1878113914" class=3D"expand-container">
+<div id=3D"expander-control-1878113914" class=3D"expand-control" aria-expan=
+ded=3D"true">
+<span class=3D"expand-icon aui-icon aui-icon-small aui-iconfont-chevron-dow=
+n"></span><span class=3D"expand-control-text conf-macro-render">Asking Ques=
+tion Best Practices</span>
+</div>
+<div id=3D"expander-content-1878113914" class=3D"expand-content">
+<div class=3D"confluence-information-macro confluence-information-macro-inf=
+ormation">
+<p class=3D"title conf-macro-render">TLDR</p><span class=3D"aui-icon aui-ic=
+on-small aui-iconfont-info confluence-information-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<ul>
+<li>Optimize for time: If a lengthy email, provide a TLDR at the top; if in=
+ async channel such as Slack, don't start with Hi/Hello and wait for a slac=
+k response before sharing your question</li>
+<li>State what you know, validate assumptions</li>
+<li>Ask the right person (start with your manager, not the CEO)</li>
+<li>Do some research first!</li>
+<li>For more information, watch <a href=3D"https://broadcast.amazon.com/vid=
+eos/5534-Writing-Great-Documents" class=3D"external-link" rel=3D"nofollow">=
+Writing at Amazon</a> on Broadcast!</li>
+</ul>
+</div>
+</div>
+<h2 id=3D"HowtobeanAwesomeColleague-Don'tasktoask,justask"><span style=3D"f=
+ont-size: 16.0px;font-weight: bold;letter-spacing: -0.006em;">Don't ask to =
+ask, just ask</span></h2>
+<p>Many communication channels at Amazon, including but not limited to emai=
+l, Slack channels, and Sage are designed for asynchronous communication, me=
+aning that you and other members of the discussion are not all online and s=
+peaking in real-time. If you have a question and are using an asynchronous =
+channel, ask it in your original post. This will help people get you answer=
+s faster because they don't have to be online and focusing on the conversat=
+ion at the same time as you.</p>
+<p>Examples of how<span>&nbsp;</span><em>not</em><span>&nbsp;</span>to ask =
+questions in asynchronous channels:</p>
+<ul>
+<li>"Hi"</li>
+<li>"I have a question with X technology."</li>
+<li>"Does anyone here have experience with Y?"</li>
+</ul>
+<p>Rephrasing questions to support asynchronous responses:</p>
+<ul>
+<li>"Hey community. I'm working with X and trying to do Y, but am receiving=
+ Z. I have tried A and my environment is B. Does anyone have an idea as to =
+what is going on?"</li>
+<li>"Hi folks. I am getting started with X. Does anyone have some resources=
+ I can review?"</li>
+<li>"Howdy people. I am trying to do Y and am looking into X. Does anyone h=
+ave any impressions of using it?"</li>
+</ul>
+<p>If you need to speak with someone live, you can ask if anyone has time t=
+o speak with you live to discuss your question. However, it's less likely t=
+hat you and a stranger on another team are going to be able to speak live o=
+n a topic at the same time than someone being able to respond asynchronousl=
+y.</p>
+<p>Related resources:</p>
+<ul>
+<li><a class=3D"external-link" href=3D"https://dontasktoask.com/" style=3D"=
+text-decoration: none;" rel=3D"nofollow">Don't Ask to Ask, Just Ask</a></li=
+>
+<li><a class=3D"external-link" href=3D"https://www.nohello.com/" style=3D"t=
+ext-decoration: none;" rel=3D"nofollow">NoHello</a></li>
+</ul>
+<h2 id=3D"HowtobeanAwesomeColleague-Askingtherightquestion"><span class=3D"=
+mw-headline">Asking the right question</span></h2>
+<h3 id=3D"HowtobeanAwesomeColleague-Isolatetheproblem"><span class=3D"mw-he=
+adline">Isolate the problem</span></h3>
+<p>When you have a problem with a piece of a large program, it's often very=
+ useful to try to extract the failing portion of the code into a standalone=
+ example. This has multiple significant benefits:</p>
+<ul>
+<li>The process of narrowing down exactly where the problem is happening ca=
+n often enable you to solve the problem yourself.</li>
+<li>It ensures that other people can reproduce the problem</li>
+<li>You can probably use the self-contained portion as a test case to preve=
+nt regressions in the future.</li>
+</ul>
+<ul>
+<li>See also
+<ul>
+<li><a class=3D"external-link" href=3D"http://sscce.org/" style=3D"text-dec=
+oration: none;" rel=3D"nofollow">Short, Self-Contained, Compilable Example<=
+/a></li>
+<li><a class=3D"external-link" href=3D"https://stackoverflow.com/help/mcve"=
+ style=3D"text-decoration: none;" rel=3D"nofollow">Minimal, Complete, and V=
+erifiable example</a></li>
+</ul></li>
+</ul>
+<h2 id=3D"HowtobeanAwesomeColleague-Explainyourusecase"><span class=3D"mw-h=
+eadline">Explain your use case</span></h2>
+<p>When you ask "how do I do X", please also describe "why I want to do X".=
+ That's because, while you might have arrived at "X" as the way to solve a =
+particular part of your problem, there might be a better way to solve the o=
+verall problem that doesn't involve doing "X" at all.</p>
+<p>Even if you're sure that what you're trying to do is the right thing to =
+do, it's still helpful for people to understand the context in order to pro=
+vide an<span>&nbsp;</span><a class=3D"external-link" href=3D"https://otfjok=
+es.com/profession-jokes/manager-jokes-with-engineer/" style=3D"text-decorat=
+ion: none;" rel=3D"nofollow">accurate<span>&nbsp;</span>useful answer</a>.<=
+/p>
+<ul>
+<li>See also:<span>&nbsp;</span><a class=3D"external-link" href=3D"http://x=
+yproblem.info/" style=3D"text-decoration: none;" rel=3D"nofollow">The XY Pr=
+oblem</a></li>
+</ul>
+<h2 id=3D"HowtobeanAwesomeColleague-Includenecessarydetails"><span class=3D=
+"mw-headline">Include necessary details</span></h2>
+<p>If you're trying to troubleshoot a failure of some kind,<span>&nbsp;</sp=
+an><em>be specific</em><span>&nbsp;</span>about the error that you're getti=
+ng; don't just say "it doesn't work".</p>
+<p>Information that's necessary to answer your question might include:</p>
+<ul>
+<li>All relevant Brazil packages, version sets, Brazil builds, Apollo envir=
+onments, Apollo deployments, hostnames, files in source control, etc.
+<ul>
+<li>Do not link to build logs (like<span>&nbsp;</span><code><a class=3D"ext=
+ernal-link" href=3D"https://build.amazon.com/log?nbtmTaskId=3D...&amp;attem=
+ptId=3D3" style=3D"text-decoration: none;" rel=3D"nofollow">https://build.a=
+mazon.com/log?nbtmTaskId=3D...&amp;attemptId=3D3</a></code>). Link to build=
+s (like<span>&nbsp;</span><code><a class=3D"external-link" href=3D"https://=
+build.amazon.com/NNNNNNNN" style=3D"text-decoration: none;" rel=3D"nofollow=
+">https://build.amazon.com/NNNNNNNN</a></code>). Build logs don't provide e=
+nough information.</li>
+</ul></li>
+<li>A<span>&nbsp;</span><a href=3D"https://w.amazon.com/bin/view/BuilderToo=
+ls/Product/WorkspaceSnapshots" style=3D"text-decoration: none;" title=3D"Bu=
+ilderTools/Product/WorkspaceSnapshots" class=3D"external-link" rel=3D"nofol=
+low">workspace snapshot</a><span>&nbsp;</span>which captures the state of y=
+our working environment when the problem occurs. This should allow others t=
+o get reasonably close to your running environment in order to reproduce th=
+e problem. Note that if you've customised your environment in some relevant=
+ way - such as setting BRAZIL_PLATFORM_OVERRIDE - you should call this out.=
+</li>
+<li>A full exception message and stack trace</li>
+<li>A link to a failed build or deployment
+<ul>
+<li>if you've submitted a build, link to the build on <a href=3D"http://bui=
+ld.amazon.com" class=3D"external-link" rel=3D"nofollow">build.amazon.com</a=
+></li>
+<li>if you've got a failed deployment, link to the deployment on <a href=3D=
+"http://apollo.amazon.com" class=3D"external-link" rel=3D"nofollow">apollo.=
+amazon.com</a> (native EC2 deployments are trickier as others probably don'=
+t have access to your logs; in this case you'll need to put the logs somewh=
+ere that others can see them)</li>
+</ul></li>
+<li>The output you expect to get, and the output you're getting instead</li=
+>
+<li>Date and time (with timezone) of the event/action</li>
+</ul>
+<h2 id=3D"HowtobeanAwesomeColleague-Formatforlegibility"><span class=3D"mw-=
+headline">Format for legibility</span></h2>
+<p>People are more likely to read questions that are easy to read, and Sage=
+ provides tools to help you format your text for easy reading. It uses a va=
+riant of the<span>&nbsp;</span><a class=3D"external-link" href=3D"https://w=
+.amazon.com/index.php/KnowledgeTech/Sage#HWhatMarkdownsupportisavailableonS=
+age3F" style=3D"text-decoration: none;" rel=3D"nofollow">Markdown text mark=
+up language</a><span>&nbsp;</span>for formatting; its editing window has a =
+toolbar to help you write valid Markdown; and it has a preview window that =
+shows you what the Markdown looks like before you post it.</p>
+<p>Some people post questions in a way that make the question<span>&nbsp;</=
+span><em>harder</em><span>&nbsp;</span>to read.</p>
+<h3 id=3D"HowtobeanAwesomeColleague-Omitunnecessarytext"><span class=3D"mw-=
+headline">Omit unnecessary text</span></h3>
+<p><span class=3D"mw-headline"><span style=3D"color: rgb(51,51,51);">If you=
+ paste log messages into a question, look for text that is unimportant and =
+remove it. Messages from the build system that aren't relevant to the probl=
+em are unimportant.</span></span></p>
+<h2 id=3D"HowtobeanAwesomeColleague-Choosetherightaudienceandvenue"><span c=
+lass=3D"mw-headline">Choose the right audience and venue</span></h2>
+<p>If your question is about publicly-available software or services, such =
+as widely-used open source software, the best place to ask your question is=
+ probably in open public forums, rather than on Amazon-internal channels.</=
+p>
+<p>If you have a problem with a particular system or component, check its d=
+ocumentation for contact and support information. The documentation may rec=
+ommend using Sage, using a mailing list, or opening a SIM issue with the ow=
+ners.</p>
+<p>Sage is designed from the ground up to be searchable. If someone has ask=
+ed the question already, there is a good chance that you can find the answe=
+r there. If you are the first person to ask your question, then Sage will m=
+ake your question and its answers available to other people searching later=
+. Make sure you use relevant tags when searching and when asking your quest=
+ion.</p>
+<p>Mailing lists are searchable if they are set up to be archived. You can =
+find their old messages on the<span>&nbsp;</span><a class=3D"external-link"=
+ href=3D"https://is.amazon.com/" style=3D"text-decoration: none;" rel=3D"no=
+follow">Internal Search page</a>. (Select "Email List Archive" as the sourc=
+e.) Like Sage tags, the people reading the questions are likely to be famil=
+iar with the topic.</p>
+<p>When looking for relevant mailing lists in the email list tool, be sure =
+to check to see if an info message or description has been set for a list b=
+efore mailing it. Don't assume that the mailing list is relevant based on t=
+he name alone--name conflicts are common at Amazon. (If you own a list that=
+ gets off-topic messages,<span>&nbsp;</span><a href=3D"https://w.amazon.com=
+/bin/view/ItechDev/Products/EmailListTool/FAQ#How_do_I_get_one_of_those_inf=
+o_messages_for_my_news_group.3F" style=3D"text-decoration: none;" title=3D"=
+ItechDev/Products/EmailListTool/FAQ" class=3D"external-link" rel=3D"nofollo=
+w">set a description</a>!)</p>
+<p>Don't email unrelated lists just because they have a large audience. If =
+you're unsure where to start,<span>&nbsp;</span><span class=3D"plainlinks">=
+<a class=3D"external-link" href=3D"https://email-list.amazon.com/email-list=
+/expand-list/dev-questions" style=3D"text-decoration: none;" rel=3D"nofollo=
+w">dev-questions@</a></span><span>&nbsp;</span>is a general-purpose list th=
+at can answer your question or point you in the right direction. Just becau=
+se the majority of code written at Amazon is in Java doesn't mean that all =
+questions should go to java-dev@!</p>
+<p>In some cases you may have the opportunity to choose between multiple on=
+-topic forums, for example, Sage, an email list, and the support queue of a=
+ team that owns a product that you're using. For general guidance or troubl=
+eshooting, you may want to turn to the community-supported forums first (as=
+ the owners should also monitor those) to get a wider audience. If you do a=
+sk a question in multiple places, please mention where it is cross-posted s=
+o that multiple people don't spend time answering your question in differen=
+t places. If you get an answer in one place, please update all of the other=
+ places you asked the question.</p>
+<p>If your team does not know the answer to a problem, and you find the ans=
+wer through another method,<span>&nbsp;</span><em>instruct your team</em>. =
+Tell them what the problem was and what the solution is. It trains them, an=
+d makes you<span>&nbsp;</span><a class=3D"external-link" href=3D"https://w.=
+amazon.com/bin/view/LeadershipPrinciples/HireAndDevelopTheBest/" style=3D"t=
+ext-decoration: none;" rel=3D"nofollow">look good at review time</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><strong>How to Provide Feedback&nbsp;</strong></p>
+<div id=3D"expander-2013013105" class=3D"expand-container">
+<div id=3D"expander-control-2013013105" class=3D"expand-control" aria-expan=
+ded=3D"true">
+<span class=3D"expand-icon aui-icon aui-icon-small aui-iconfont-chevron-dow=
+n"></span><span class=3D"expand-control-text conf-macro-render">Click here =
+to expand...</span>
+</div>
+<div id=3D"expander-content-2013013105" class=3D"expand-content">
+<p><a href=3D"https://www.forbes.com/sites/amberjohnson-jimludema/2019/11/0=
+7/criticism-vs-feedback/?sh=3D1bfb8307794a" style=3D"letter-spacing: 0.0px;=
+" class=3D"external-link" rel=3D"nofollow">Five Essential Differences Betwe=
+en Feedback and Criticism</a></p>
+<ol>
+<li>Criticism focuses on what we don=E2=80=99t want. Feedback focuses on wh=
+at we do want.</li>
+<li>Criticism is focused on the past. Feedback is focused on the future.</l=
+i>
+<li>Criticism is focused on weaknesses. Feedback builds up strengths.</li>
+<li>Criticism deflates. Feedback inspires.</li>
+<li>Criticism says =E2=80=9CYou are the problem=E2=80=9D. Feedback says =E2=
+=80=9CWe can make this better together.=E2=80=9D</li>
+</ol>
+<p><br></p>
+<p><a href=3D"https://quip-amazon.com/GQNMAD7LrbR6/Creator-Tools-Peer-Feedb=
+ack-Day" class=3D"external-link" rel=3D"nofollow">https://quip-amazon.com/G=
+QNMAD7LrbR6/Creator-Tools-Peer-Feedback-Day</a></p>
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><strong>Suggestions to Meet Better at Audible</strong> (<a href=3D"https=
+://allofus--simpplr.visualforce.com/apex/simpplr__app?u=3D/site/a148c000004=
+Q8NnAAK/page/a128c000003hKfOAAU" class=3D"external-link" rel=3D"nofollow">l=
+ink</a>)</p>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><strong>Meeting Attendee <a href=3D"https://w.amazon.com/bin/view/Meetin=
+g_Attendee_Bill_of_Rights" class=3D"external-link" rel=3D"nofollow">Bill of=
+ Rights<span class=3D"confluence-anchor-link" id=3D"HowtobeanAwesomeColleag=
+ue-MeetingAttendeeBillofRights"></span></a></strong></p>
+<div id=3D"expander-1671063334" class=3D"expand-container">
+<div id=3D"expander-control-1671063334" class=3D"expand-control" aria-expan=
+ded=3D"true">
+<span class=3D"expand-icon aui-icon aui-icon-small aui-iconfont-chevron-dow=
+n"></span><span class=3D"expand-control-text conf-macro-render">Meeting Att=
+endee Bill of Rights</span>
+</div>
+<div id=3D"expander-content-1671063334" class=3D"expand-content">
+<p>As a meeting attendee, you have the:</p>
+<ul>
+<li>Right to an agenda</li>
+<li>Right to know the agenda before you decide to come to the meeting</li>
+<li>Right to effective use of your time:
+<ul>
+<li>Right to have the meeting start on time [right to leave if not started =
+at +10 minutes]</li>
+<li>Right to adjourn meeting at the appointed time [right to walk out if th=
+e meeting goes overtime]</li>
+<li>Right to reasonable advanced notice for non-critical meetings</li>
+<li>Right to adjourn early when the agenda is fulfilled</li>
+<li>Right to leave meetings as soon as you discover it is an ineffective us=
+e of your time, or is going off track</li>
+</ul></li>
+<li>Right to clear and timely minutes</li>
+<li>Right to meeting materials at the start of the meeting, and right to re=
+quest prior to the meeting</li>
+<li>Right to adequate representation necessary for effective meetings (and =
+right to release attendees if key representation doesn't show up)</li>
+<li>Right to decline meetings when overbooked</li>
+<li>Right to request a meeting in business friendly hours</li>
+<li>Remote-inclusive meetings
+<ul>
+<li>Right to a Chime dial-in in the meeting invite</li>
+<li>Right to a video conference (for visibility and ease-of-communication)<=
+/li>
+<li>Right to have meeting rooms pre-booked in satellite offices</li>
+<li>Right to inclusion/participation (ensure those on the phone/VC have an =
+opportunity to speak)</li>
+<li>Right to electronic copy of documents and/or meeting materials at the s=
+tart of the meeting</li>
+<li>Right to decline attending meetings scheduled without consideration of =
+my time zone</li>
+</ul></li>
+</ul>
+<p>Recurring meetings shall have:</p>
+<ul>
+<li>Agenda</li>
+<li>List of required attendees and backups if the key attendee is unavailab=
+le</li>
+<li>Scribe</li>
+<li>Minutes</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><strong>How to Make Hybrid Meetings Inclusive</strong></p>
+<div id=3D"expander-1820765837" class=3D"expand-container">
+<div id=3D"expander-control-1820765837" class=3D"expand-control" aria-expan=
+ded=3D"true">
+<span class=3D"expand-icon aui-icon aui-icon-small aui-iconfont-chevron-dow=
+n"></span><span class=3D"expand-control-text conf-macro-render">Click here =
+to expand...</span>
+</div>
+<div id=3D"expander-content-1820765837" class=3D"expand-content">
+<p><strong>Make (Hybrid) Meetings Inclusive</strong></p>
+<p>As our way of working continues to evolve, we recognize that many meetin=
+gs will include a meaningful split of its participants between hub and home=
+, across various locations. With that comes some work for each of us as mee=
+ting facilitators (and participants) to ensure all voices are heard regardl=
+ess of location.</p>
+<ul>
+<li><strong>In-office meetings and remote participants:</strong> When a num=
+ber of employees are in the same conference room, it=E2=80=99s easy for fol=
+ks to fall into conversations with each other, which can be challenging for=
+ remote folks to participate in and/or read the room. <u>Mechanism(s):</u> =
+If a meeting has remote participants, folks in office should enable their c=
+amera just as they would from home to make it easier for the remote folks t=
+o read body language etc. Folks in the office should also keep an eye on CH=
+IME comments etc. As a tenet, in-office participation should not be at the =
+expense of remote employees.</li>
+<li><strong>When and how to jump in</strong>:<strong> </strong>absent high-=
+fidelity body language and other contextual signals, its challenging to par=
+ticipate in meetings without interrupting someone, or being interrupted. <u=
+>Mechanism(s):</u> If there=E2=80=99s a natural break, feel free to make yo=
+ur comment. If it=E2=80=99s more of an active conversation, then please use=
+ the =E2=80=9Craise your hand=E2=80=9D feature in CHIME. As the document ow=
+ner and/or meeting leader need to keep us on track, its ok for them to spea=
+k without hand-raising on every intermission.</li>
+<li><strong>Ask for other=E2=80=99s opinions first: </strong>we all need to=
+ take our turn to participate, but when we have more junior folks in the ro=
+om please give them the chance to speak or provide input first. This is rea=
+lly important to help folks stretch their wings as they develop in their ca=
+reers. Please also take care that we don=E2=80=99t squelch feedback, and fi=
+rst seek to understand feedback before giving an opinion on it. <u>Mechanis=
+m(s):</u> More senior leaders should let other folks give their opinion pri=
+or to sharing their own, to learn what others think. Where we can, meeting =
+owners should use round-robin and other mechanisms to open up feedback from=
+ all participants.</li>
+<li><strong>Create an opening for others:</strong> meetings should be balan=
+ced and not dominated by any individual(s). We should open the floor to bro=
+ader participation by giving space and time for this. We need to solicit mo=
+re voice, and seek diverse perspectives. <u>Mechanism(s):</u> If you are mo=
+derating the meeting, and observe someone dominating a conversation to the =
+point that others can=E2=80=99t contribute, then redirect the conversation =
+to other participants. When participating, consider the perspective from th=
+e other folks in the room.</li>
+<li><strong>Help others: </strong>we all need friendly feedback on how we=
+=E2=80=99re doing<strong> </strong>to make durable change. <u>Mechanism(s)<=
+/u>: If you see someone demonstrating best meeting practices, then recogniz=
+e and reinforce them. And if you observe someone who is not following the g=
+uidelines, then bring this up to them in an appropriate setting.</li>
+</ul>
+<p><strong>Some quick tips:</strong></p>
+<ul>
+<li>If you=E2=80=99re in the hub, join the meeting on your laptop and selec=
+t the option to =E2=80=9CDisable Mic &amp; Speakers=E2=80=9D to avoid feedb=
+ack, and share your video.</li>
+<li>Have everyone in the meeting, regardless of whether they are in the hub=
+ or remote, use the hand raise feature.</li>
+<li>For larger meetings, assign the role of =E2=80=9CChime chat moderator=
+=E2=80=9D to manage attendee list, field comments/questions, and yield the =
+floor to those participants using the =E2=80=9Craised hand=E2=80=9D feature=
+.</li>
+<li>Encourage remote participants off-camera to join with video when speaki=
+ng.</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p class=3D"auto-cursor-target"><strong>How to Run Inclusive Meetings</stro=
+ng></p>
+<div id=3D"expander-498556793" class=3D"expand-container">
+<div id=3D"expander-control-498556793" class=3D"expand-control" aria-expand=
+ed=3D"true">
+<span class=3D"expand-icon aui-icon aui-icon-small aui-iconfont-chevron-dow=
+n"></span><span class=3D"expand-control-text conf-macro-render">How to run =
+inclusive meetings</span>
+</div>
+<div id=3D"expander-content-498556793" class=3D"expand-content">
+<h2 id=3D"HowtobeanAwesomeColleague-7Tips(FromHypercontext)"><strong>7 Tips=
+</strong> (From <a href=3D"https://hypercontext.com/blog/management-skills/=
+how-to-run-inclusive-meetings" class=3D"external-link" rel=3D"nofollow">Hyp=
+ercontext</a>)</h2>
+<ol>
+<li>Introduce a facilitator</li>
+<li>Build a collaborative agenda</li>
+<li>Listen deeply and amplify</li>
+<li>Provide more than one way to contribute</li>
+<li>Build psychological safety and encourage employees to take risks</li>
+<li>Include people who share opposing views</li>
+<li>End as strong as you start: nail the follow-up</li>
+</ol>
+<h3 id=3D"HowtobeanAwesomeColleague-1.Introduceafacilitatortoyourmeetings">=
+<strong>1. Introduce a facilitator to your meetings</strong></h3>
+<p>Help meetings become more inclusive by appointing a new team member as t=
+he meeting facilitator for each meeting.&nbsp;</p>
+<p>A facilitator is responsible for leading and guiding the conversation, e=
+nsuring it stays on track. Ideally, a facilitator creates an inclusive envi=
+ronment where attendees feel comfortable sharing their thoughts and opinion=
+s by ensuring people aren=E2=80=99t being interrupted and everyone=E2=80=99=
+s given a chance to speak. Let every employee have the chance to speak<a hr=
+ef=3D"https://ideas.ted.com/how-to-have-inclusive-meetings-over-zoom/" styl=
+e=3D"text-decoration: underline;" class=3D"external-link" rel=3D"nofollow">=
+<span>&nbsp;</span>especially when the meeting is virtual</a>.</p>
+<ol>
+<li><strong>a Meeting Agenda &amp; Attendee Role in Meetings</strong>
+<ol>
+<li><strong>Meeting Agenda (see Bill of Rights)</strong></li>
+<li><strong>Attendee Role in Meetings</strong>
+<ol>
+<li><strong>To Contribute</strong></li>
+<li><strong>To Stay Informed</strong></li>
+<li><strong>To be a decision maker</strong></li>
+<li><strong>To be accountable for decisions</strong></li>
+</ol></li>
+</ol></li>
+</ol>
+<h3 id=3D"HowtobeanAwesomeColleague-2.Buildacollaborativeagenda"><strong>2.=
+ Build a collaborative agenda</strong></h3>
+<p>It=E2=80=99s no secret: we=E2=80=99re big fans of a good, collaborative =
+agenda.&nbsp;</p>
+<p>They=E2=80=99re an<span>&nbsp;</span><a href=3D"https://hypercontext.com=
+/blog/management-skills/inclusive-leadership-what-you-need-to-know" style=
+=3D"text-decoration: underline;" class=3D"external-link" rel=3D"nofollow">i=
+nclusive leader</a>=E2=80=99s secret weapon. Send out your agenda before an=
+y meeting. It can be a simple outline of topics to discuss or be more focus=
+ed by sending out a specially built, recurring agenda.</p>
+<p>Sharing the main agenda items in advance gives everyone the chance to pr=
+epare and contribute. So no one=E2=80=99s left feeling on the spot. It give=
+s everyone the opportunity to add items they want to discuss to ensure they=
+ don=E2=80=99t get left out of the conversation. Plus, participants can add=
+ comments to the agenda in advance which is helpful for those who feel less=
+ comfortable speaking up during a meeting.</p>
+<h3 id=3D"HowtobeanAwesomeColleague-3.Listendeeplyandamplify"><strong>3. Li=
+sten deeply and amplify&nbsp;</strong></h3>
+<p>When employees share ideas, make sure you amplify and give credit where =
+credit is due. Amplification is vital for inclusion since people of color, =
+women and other underrepresented groups<a href=3D"https://hbr.org/2021/06/r=
+esearch-amplifying-your-colleagues-voices-benefits-everyone" style=3D"text-=
+decoration: underline;" class=3D"external-link" rel=3D"nofollow"><span>&nbs=
+p;</span>are more likely to be dismissed or spoken over</a>.</p>
+<p>Further, according to our<span>&nbsp;</span><a href=3D"https://hypercont=
+ext.com/state-of-high-performing-teams-in-tech" style=3D"text-decoration: u=
+nderline;" class=3D"external-link" rel=3D"nofollow">State of High Performin=
+g Teams in Tech report</a>, people of color are less likely to feel comfort=
+able speaking in internal meetings than white colleagues. And those who ide=
+ntify as women are less likely to feel comfortable speaking in meetings tha=
+n men. Not to mention, Gen Z is the generation most unlikely to feel comfor=
+table speaking in meetings compared to older generations.</p>
+<p>If people are constantly feeling like their voices aren=E2=80=99t being =
+heard, or uncomfortable sharing their thoughts, they=E2=80=99re eventually =
+going to give up and disengage. As a leader, it=E2=80=99s your responsibili=
+ty to not let this happen. Given that meetings are a place for just that =
+=E2=80=94&nbsp;sharing, listening, innovating =E2=80=94&nbsp;they=E2=80=99r=
+e the perfect time to start creating a more inclusive and engaging environm=
+ent.</p>
+<h3 id=3D"HowtobeanAwesomeColleague-4.Providemorethanonewaytocontribute"><s=
+trong>4. Provide more than one way to contribute</strong></h3>
+<p>Despite the hard work being done around DEI, privilege and power dynamic=
+s are still present in many workplaces. Unshockingly, it can seep into our =
+meetings, too. Those who are more extroverted, assertive, and the majority =
+demographic are more likely to take up air time and receive more credit. Th=
+ey=E2=80=99re also typically<span>&nbsp;</span><a href=3D"https://www.advis=
+ory.com/en/daily-briefing/2017/07/07/men-interrupting-women" style=3D"text-=
+decoration: underline;" class=3D"external-link" rel=3D"nofollow">forgiven m=
+ore often when they interrupt</a>. Breaking this cycle requires mindfulness=
+ from the leader.&nbsp;</p>
+<p>Combatting this means actively encouraging participation from those who =
+don=E2=80=99t usually get the space to speak or share. Follow this great ad=
+vice from<span>&nbsp;</span><a href=3D"https://evajomeyers.com/" style=3D"t=
+ext-decoration: underline;" class=3D"external-link" rel=3D"nofollow">Eva Jo=
+ Meyers</a>: =E2=80=9Cno one should speak twice until everyone has spoken o=
+nce.=E2=80=9D&nbsp;</p>
+<p>But, keep in mind that people have different<span>&nbsp;</span><a href=
+=3D"https://hypercontext.com/blog/communication/workplace-communication-sty=
+les" style=3D"text-decoration: underline;" class=3D"external-link" rel=3D"n=
+ofollow">communication styles</a>. Speaking up during a meeting can be awkw=
+ard and not everyone feels comfortable doing so. But there are also other w=
+ays to invite contributions, beyond speaking up during the meetings. For ex=
+ample:</p>
+<ul>
+<li>If you=E2=80=99re virtual, encourage participation through the chat fun=
+ction. If someone contributes an idea, call on them to expand</li>
+<li>Use a collaborative meeting agenda, where people can add their thoughts=
+ or comments in advance</li>
+<li>Allow people to add comments to the meeting notes for a set amount of t=
+ime post-meeting&nbsp;</li>
+</ul>
+<p>"<span style=3D"color: rgb(96,94,128);">=E2=80=9CPlease share any items =
+you=E2=80=99d like to discuss during the meeting in the agenda so we can ma=
+ke sure we cover them in the meeting.=E2=80=9D"</span></p>
+<h3 id=3D"HowtobeanAwesomeColleague-5.Buildpsychologicalsafetyandencouragee=
+mployeestotakerisks"><strong>5. Build psychological safety and encourage em=
+ployees to take risks</strong></h3>
+<p>We know<span>&nbsp;</span><a href=3D"https://hypercontext.com/blog/commu=
+nication/why-you-need-to-foster-a-culture-of-psychological-safety-on-your-t=
+eam-and-3-ways-to-do-it" style=3D"text-decoration: underline;" class=3D"ext=
+ernal-link" rel=3D"nofollow">psychological safety</a><span>&nbsp;</span>cha=
+nges how an employee arrives to work and how a team functions.&nbsp;</p>
+<p><strong>What does psychological safety mean?<span>&nbsp;</span></strong>=
+Amy Edmondson<span>&nbsp;</span><a href=3D"http://web.mit.edu/curhan/www/do=
+cs/Articles/15341_Readings/Group_Performance/Edmondson%20Psychological%20sa=
+fety.pdf" style=3D"text-decoration: underline;" class=3D"external-link" rel=
+=3D"nofollow">defines it</a><span>&nbsp;</span>as =E2=80=9CA shared belief =
+that the team is safe for interpersonal risk-taking.=E2=80=9D Encouraging y=
+our whole team to share their thoughts openly can pay dividends.&nbsp; It c=
+an help them become more confident in being vulnerable and<span>&nbsp;</spa=
+n><a href=3D"https://www.betterup.com/blog/why-psychological-safety-at-work=
+-matters" style=3D"text-decoration: underline;" class=3D"external-link" rel=
+=3D"nofollow">taking calculated risks</a>.&nbsp;</p>
+<p>Inclusivity certainly isn=E2=80=99t reserved for team meetings. You can =
+and should shape your<span>&nbsp;</span><a href=3D"https://hypercontext.com=
+/one-on-one-meeting-guide" style=3D"text-decoration: underline;" class=3D"e=
+xternal-link" rel=3D"nofollow">one-on-ones</a><span>&nbsp;</span>to be more=
+ inclusive. In fact, the trust you build in your one-on-ones will be reflec=
+ted in how comfortable team members are in team meetings. It will build tru=
+st between you and your employees, encouraging them to take risks and incre=
+ase psychological safety. These meetings can be the lifeblood of a strong e=
+mployee/manager relationship where communication and feedback flow freely.&=
+nbsp;</p>
+<p><span style=3D"color: rgb(96,94,128);">=E2=80=9CLet=E2=80=99s agree to b=
+e open to new ideas and express any disagreement respectfully.=E2=80=9D<spa=
+n>&nbsp;</span></span><span style=3D"color: rgb(96,94,128);">Ps. If you=E2=
+=80=99re not taking risks as a leader, it=E2=80=99ll be impossible for your=
+ team to do the same. So make sure you practice what you preach.</span></p>
+<h3 id=3D"HowtobeanAwesomeColleague-6.Includepeoplewhoshareopposingviews"><=
+strong>6. Include people who share opposing views</strong></h3>
+<p>Speaking of sharing differing opinions, success in a business begins wit=
+h embracing opposing views. But doing so respectfully and with inclusion in=
+ mind can be difficult.&nbsp;</p>
+<p>Introducing new ideas, breaking bias, and challenging groupthink for opt=
+imal business outcomes should be top of your list as a leader. Building inc=
+lusive teams means inviting opposing views and encouraging healthy, respect=
+ful discussion.&nbsp;</p>
+<h3 id=3D"HowtobeanAwesomeColleague-7.Endasstrongasyoustart:nailthefollow-u=
+p"><strong>7. End as strong as you start: nail the follow-up</strong></h3>
+<p>Sometimes, the most essential part of a meeting comes after the meeting =
+itself. How you share notes, action items, and recorded videos or transcrip=
+ts can make all the difference in your next team meeting. It also allows th=
+ose who could not attend or<span>&nbsp;</span><a href=3D"https://www.forbes=
+.com/sites/rebekahbastian/2019/10/23/tips-for-supporting-neurodiversity-in-=
+the-workplace/?sh=3D1e9267b23f8c" style=3D"text-decoration: underline;" cla=
+ss=3D"external-link" rel=3D"nofollow">have different accommodations or cons=
+iderations</a><span>&nbsp;</span>to stay in the know. Sharing information p=
+ost-meeting gives these individuals the chance to weigh in later.&nbsp;</p>
+<p><span style=3D"color: rgb(96,94,128);">1. Share meeting notes with all p=
+articipants after the meeting.</span><br><span style=3D"color: rgb(96,94,12=
+8);">2. Assign action items/next steps so everyone has a clear understandin=
+g of what they=E2=80=99re responsible for.</span><br><span style=3D"color: =
+rgb(96,94,128);">3. Ask for feedback on how the meeting was run and iterate=
+ going forward.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><strong>Post Meeting Reflection</strong></p>
+<div id=3D"expander-2140738388" class=3D"expand-container">
+<div id=3D"expander-control-2140738388" class=3D"expand-control" aria-expan=
+ded=3D"true">
+<span class=3D"expand-icon aui-icon aui-icon-small aui-iconfont-chevron-dow=
+n"></span><span class=3D"expand-control-text conf-macro-render">Post Meetin=
+g Queestions</span>
+</div>
+<div id=3D"expander-content-2140738388" class=3D"expand-content">
+<p>POST MEETING QUESTIONS</p>
+<p>Jump to a post-meeting feedback question.</p>
+<p>Meeting effective questions are meant to answer:&nbsp;</p>
+<ul style=3D"text-decoration: none;">
+<li>Whether or not the meeting was a good use of time</li>
+<li>If meeting attendees got what they intended to get out of the meeting</=
+li>
+<li>If the meeting quality has improved or deteriorated over time</li>
+</ul>
+<p><br></p>
+<p><span><strong>1.Was this meeting helpful?</strong></span></p>
+<ul style=3D"text-decoration: none;">
+<li><span><strong>=E2=80=9CHelpful,=E2=80=9D =E2=80=9CSomewhat Helpful=E2=
+=80=9D and =E2=80=9CNot Helpful.=E2=80=9D&nbsp;<br></strong></span></li>
+</ul>
+<p><span>This question measures meeting effectiveness by focusing on utilit=
+y: did the participants walk away from this meeting with the tools/info/ins=
+ight they needed to nail it at their job? Are they clear on what their task=
+s are or what is expected of them?<br></span></p>
+<p><br></p>
+<p><strong>1.a Do you have feedback for anyone in the meeting?</strong></p>
+<p><br></p>
+<p><span><strong>2. Has your outlook for the future changed?</strong></span=
+></p>
+<ul style=3D"text-decoration: none;">
+<li><span><strong>=E2=80=9CBetter,=E2=80=9D =E2=80=9CSame=E2=80=9D and =E2=
+=80=9CWorse.=E2=80=9D<br></strong></span></li>
+</ul>
+<p>This question really asks, was this conversation meaningful?</p>
+<p>That=E2=80=99s what makes it ideal for one-on-ones and smaller teams of =
+less than three people =E2=80=93 or even teams that are going through a per=
+iod of transition. It gets at some of the more emotional or vulnerable elem=
+ents of being an employee.</p>
+<p><span><strong>3.How would you rate this meeting?</strong></span></p>
+<ul style=3D"text-decoration: none;">
+<li><span><strong>=E2=80=9CExcellent,=E2=80=9D =E2=80=9CGood=E2=80=9D and =
+=E2=80=9CNeeds Improvement.=E2=80=9D<br></strong></span></li>
+</ul>
+<p><span>This is probably the most simple post-meeting survey question you =
+can ask =E2=80=93&nbsp;which makes it a versatile option for virtually any =
+type of meeting. You=E2=80=99ll find this question recommended in lots of m=
+anagement books as a must-have to ensure you=E2=80=99re always improving yo=
+ur meeting effectiveness by 1%.<br></span></p>
+<p><span><br></span></p>
+<p><span><strong>4.How would you describe our current performance level?</s=
+trong></span></p>
+<ul style=3D"text-decoration: none;">
+<li><strong>Excellent, Room to Improve, Improvements Needed</strong></li>
+</ul>
+<p><span>This question can help you gauge the confidence level of your team=
+ when it comes to hitting goals. This is also a great meeting prompt for te=
+ams who set goals using the&nbsp;<a href=3D"https://hypercontext.com/blog/m=
+eetings/traffic-light-system-for-okr-management-agenda-template-included" s=
+tyle=3D"text-decoration: underline;" class=3D"external-link" rel=3D"nofollo=
+w">OKR framework</a>&nbsp;because it mimics the traffic-light system.<br></=
+span></p>
+<p><span><strong>5.How would you describe our progress toward our goals?</s=
+trong></span></p>
+<ul style=3D"text-decoration: none;">
+<li><strong>On Track, Some Concerns, Behind</strong></li>
+</ul>
+<p><span>This question is a great prompt to ask individuals how they&nbsp;<=
+em>think</em>&nbsp;you=E2=80=99re progressing towards the goals you=E2=80=
+=99ve set as a team. Similar to the previous post-meeting feedback survey, =
+this question is also great for teams operating with OKRs because of the tr=
+affic-light system.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><strong>Email Champion <a href=3D"https://w.amazon.com/bin/view/Emailcha=
+mpions" class=3D"external-link" rel=3D"nofollow">Ways of Working<span class=
+=3D"confluence-anchor-link" id=3D"HowtobeanAwesomeColleague-EmailChampion">=
+</span></a></strong></p>
+<div id=3D"expander-749372781" class=3D"expand-container">
+<div id=3D"expander-control-749372781" class=3D"expand-control" aria-expand=
+ed=3D"true">
+<span class=3D"expand-icon aui-icon aui-icon-small aui-iconfont-chevron-dow=
+n"></span><span class=3D"expand-control-text conf-macro-render">Email Champ=
+ion Ways of Working</span>
+</div>
+<div id=3D"expander-content-749372781" class=3D"expand-content">
+<ol>
+<li>I'll send emails with a clear purpose and be explicit about that purpos=
+e by using the<span>&nbsp;</span><strong>SUBJECT</strong>
+<ol>
+<li>For emails requiring an action, I'll include a prefix of<span>&nbsp;</s=
+pan><em>REQUEST:</em><span>&nbsp;</span>or<span>&nbsp;</span><em>ACTION REQ=
+UIRED:</em><span>&nbsp;</span>in the subject
+<ul>
+<li>Ideally, include a due date in the subject if it is a request</li>
+</ul></li>
+<li>For emails that are for information, I'll include<span>&nbsp;</span><em=
+>INFO:</em><span>&nbsp;</span>in the subject</li>
+<li>For emails with a question, I'll include<span>&nbsp;</span><em>QUESTION=
+:</em><span>&nbsp;</span>in the subject</li>
+<li>I'll ensure that the subject clearly represents the purpose/topic of th=
+e email as appropriate including a Customer Name / Initiative Name</li>
+</ol></li>
+<li>I'll use<span>&nbsp;</span><strong>TO</strong>,<span>&nbsp;</span><stro=
+ng>CC&nbsp;</strong>and<span>&nbsp;</span><strong>BCC&nbsp;</strong>appropr=
+iately
+<ol>
+<li><strong>TO&nbsp;</strong>for all those that I expect to<span>&nbsp;</sp=
+an><strong>act on/depend on&nbsp;</strong>my message</li>
+<li><strong>CC&nbsp;</strong>for all others that I want to keep<span>&nbsp;=
+</span><em>in the loop</em>
+<ul>
+<li>When sending to large groups, I'll always lean towards CC'ing groups, I=
+ may also send<span>&nbsp;</span><strong>TO&nbsp;</strong>people included i=
+n a group if they match the<span>&nbsp;</span><strong>TO&nbsp;</strong>rule=
+ (don't worry they won't get it twice)</li>
+</ul></li>
+<li><strong>BCC&nbsp;</strong>only when<span>&nbsp;</span><strong>I really&=
+nbsp;</strong>have to ( it breaks our precious filters/rules :) )
+<ul>
+<li>As for any good rule, there are exceptions to this to reduce traffic ov=
+erall by excluding groups from replies
+<ul>
+<li>BCC should only be used to prevent reply=E2=80=94all such as in a<span>=
+&nbsp;</span><em>Please Welcome</em><span>&nbsp;</span>email, never to secr=
+etly send someone an email. &nbsp;If you want someone to see what you sent =
+without the recipient knowing, reforward your sent mail to them.</li>
+<li>If you are BCC=E2=80=99ing legitimately, in the body of the email you s=
+hould literally list who got the email (either people or groups.). This wil=
+l prevent people forwarding with a<span>&nbsp;</span><em>Did you see this?<=
+/em><span>&nbsp;</span>header or is a useful method of allowing people to s=
+tep out of or hand over a conversation by being aware that the handover has=
+ taken place, but excluding people from future responses.</li>
+</ul></li>
+</ul></li>
+</ol></li>
+<li>I'll not hijack threads or try and address multiple different topics in=
+ a single email
+<ol>
+<li>Stay aligned with the<span>&nbsp;</span><strong>SUBJECT</strong>
+<ul>
+<li>Do another email, that is OK (the receiver can react on a single ask, i=
+f I link different deliverables, I'll likely just slow things down / hold u=
+p a response)</li>
+</ul></li>
+</ol></li>
+<li>I'll not assume you<span>&nbsp;</span><em>have an action</em><span>&nbs=
+p;</span>because I sent you an email, my inbox is not your to-do list and y=
+our inbox is not mine</li>
+<li>I'll take ownership to follow up when I receive an<span>&nbsp;</span><e=
+m>Out of Office</em>, vacations should not come with a punishment of a big =
+email backlog</li>
+<li>Do I really need to send this email? Should this be a quick Chime or Sl=
+ack message instead?</li>
+<li>When I loop someone into a long email thread, I'll summarise why I loop=
+ed them in and not expect them to unpack the whole thread. &nbsp;(Credit ed=
+jacks@)
+<ol>
+<li>I'll also tidy it up some if required, remove those big old disclaimer =
+signatures and make it more readable</li>
+</ol></li>
+<li>When someone starts a storm potentially by say sending "Unsubscribe" to=
+ a huge list - just reply to them. NOT THE LIST.
+<ol>
+<li>Notable Storms have been caused by people asking other people not to re=
+ply / to stop replying</li>
+<li>Just let it go, delete it / even better "Ignore Conversation" if you ar=
+e on Windows (or if you're not, go to<span>&nbsp;</span><span class=3D"wiki=
+internallink"><a href=3D"https://ballard.amazon.com/" style=3D"text-decorat=
+ion: none;" class=3D"external-link" rel=3D"nofollow">Outlook Web App</a></s=
+pan>, right click and ignore any email thread).</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><strong>Code Review Comments</strong></p>
+<p><a href=3D"https://conventionalcomments.org/" class=3D"external-link" re=
+l=3D"nofollow">https://conventionalcomments.org/</a></p>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><strong>Out of Office Etiquette</strong></p>
+<ol>
+<li>Create a calendar-safe invitation to your team: <em>No Response Require=
+d, Block time as FREE, No Reminder</em></li>
+<li>Add an Out of Office message in outlook.&nbsp;</li>
+<li>Update Slack to display Out of Office (the palm tree will show up!) You=
+ can have it expire automagically on the day you return.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class=3D"columnLayout single" data-layout=3D"single">
+<div class=3D"cell normal" data-type=3D"normal">
+<div class=3D"innerCell">
+<p><span class=3D"confluence-embedded-file-wrapper"><img class=3D"confluenc=
+e-embedded-image" draggable=3D"false" src=3D"02cd7a3cf2694c92fdcc29711b8db4=
+26" data-image-src=3D"/download/attachments/452079464/healthy-conflict-768x=
+768.png?version=3D1&amp;modificationDate=3D1665168816630&amp;api=3Dv2" data=
+-unresolved-comment-count=3D"0" data-linked-resource-id=3D"450846563" data-=
+linked-resource-version=3D"1" data-linked-resource-type=3D"attachment" data=
+-linked-resource-default-alias=3D"healthy-conflict-768x768.png" data-base-u=
+rl=3D"https://wiki.audible.com" data-linked-resource-content-type=3D"image/=
+png" data-linked-resource-container-id=3D"452079464" data-linked-resource-c=
+ontainer-version=3D"15" alt=3D"" width=3D"468" height=3D"468"></span></p>
+</div>
+</div>
+</div>
+</div>
+    </div>
+</body>
+</html>
