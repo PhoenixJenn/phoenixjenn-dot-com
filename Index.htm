@@ -1,175 +1,608 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-	<meta charset="utf-8" />
- 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S3M4E5Q3EN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S3M4E5Q3EN');
+</script>
+    <title>P H O E N I X J E N N</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="bootstrap3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/glyphs.css" rel="stylesheet" type="text/css">
+    <link href="css/glyphicons.css" rel="stylesheet" type="text/css">
+    <link href="css/socicon.css" rel="stylesheet" type="text/css">
+   <link href="css/phoenixjenn.css" rel="stylesheet"/>
+   
+    
+    <link href="Hover-master/css/hover-min.css" rel="stylesheet"/>
+    <link href="css/hover.css" rel="stylesheet"/>
+    
+
     <script type="text/javascript" src="Scripts/angular.js"></script>
-    <script type="text/javascript" src="Scripts/app.js"></script>
-    <script src="Scripts/jquery-2.2.3.js"></script>
- 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="Scripts/angular-animate.js"></script>
+    <script type="text/javascript" src="Scripts/mainapp.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-2.2.3.min.js"></script>
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="Bootstrap/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="bootstrap3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/ui-bootstrap-tpls-1.3.3.min.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="Bootstrap/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+   
+
+
+       <!--<script>
+        jQuery(function ($) {
+            // local url of page (minus any hash, but including any potential query string)
+            var url = location.href.replace(/#.*/, '');
+
+            // Find all anchors
+            $('.nav-main').find('a[href]').each(function (i, a) {
+                var $a = $(a);
+                var href = $a.attr('href');
+
+               //// added this block JL
+               // if (href.indexOf(url + '#') == 0) {
+               //     alert(url);
+               //     href = href.replace(/^\//, "");
+               //     href = href.replace(/#.*/, '');
+               // }
+                // check is anchor href starts with page's URI
+                if (href.indexOf(url + '#') == 0) {
+                    // remove URI from href
+
+                    href = href.replace(url, '');
+                    // update anchors HREF with new one
+                    $a.attr('href', href);
+                }
+
+                // Now refresh scrollspy
+                $('[data-spy="scroll"]').each(function (i, spy) {
+                    var $spy = $(this).scrollspy('refresh')
+                })
+            });
+
+            $('body').scrollspy({ target: '.nav-main', offset: 155 })
+
+        });-->
+
+        <!--/**
+ * Scroll Spy via Bootstrap
+ */
+        $('body').scrollspy({ target: "#nav_wrapper", offset: 50 });
+
+        /**
+         * Scroll Spy meet WordPress menu.
+         */
+        // Only fire when not on the homepage
+        if (window.location.pathname !== "/") {
+            // Selector for top nav a elements
+            $('#top_main_nav a').each(function () {
+                if (this.hash.indexOf('#') === 0) {
+                    // Alert this to an absolute link (pointing to the correct section on the hompage)
+                    this.href = "/" + this.hash;
+                }
+            });
+        }
+
+        /**
+         * Initiate Awesome Smooth Scrolling based on a.href
+         */
+        $('a.smooth-scroll, #top_main_nav a').click(function () {
+            target = $(this).attr('href');
+            offset = $(target).offset();
+            $('body,html').animate({ scrollTop: offset.top }, 700);
+            event.preventDefault();
+        });
+    </script>-->
+
+
     <style>
-    body {    padding-top: 65px; }
-        .carousel-inner > .item > img,
-        .carousel-inner > .item > a > img {
-            width: 70%;
-            margin: auto;
+
+
+       body {
+            position: relative;
+             background-color: #ffffff;
+        }
+      
+        #comicpanel {
+            background-color: #000000;
+        }
+        #foreword .yellow {
+            padding-top: 20px;
+            height: 500px;
+            color: #000000;
+            font-family: verdana;
+            background-color: #ffd800; 
             
         }
-    </style>
-</head>
-<body>
+        
+          
+        #section2  .white{
+            padding-top: 10px;
+            height: 500px;
+            font-family: verdana;
+            color: #000000;
+            background-color: #ffffff; 
+        }
 
-    <div ng-app="myApp" ng-controller="myCtrl">
+        #section3 .blue {
+            padding-top: 50px;
+            height: 500px;
+            font-family: verdana;
+            color: #ffffff;
+            background-color: #0094ff;  
+        }
+         #section4 .red {
+            padding-top: 50px;
+            height: 500px;
+            color: #ffffff;
+            background-color: #ff0000; 
+        }
+        #section41  .grey{
+            padding-top: 50px;
+            height: 500px;
+            color: #000;
+            background-color: #808080; 
+        }
+
+        #section42 {
+            padding-top: 10px;
+            height: 500px;
+            color: #808080;
+            background-color: #ffffff;
+        }
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+
+            @media only screen and (min-width: 800px) 
+            .nudge {
+                opacity: 0; -webkit-transform: translateY(40px);
+            }
+    </style>
+  
+</head>
+<body id="myPage" ng-app="">
+    <!--<body data-spy="scroll" data-target=".navbar" data-offset="50" id="myPage" ng-app="">-->
+    <div ng-include="'nav.html'"></div>
+
+
+    <div class="jumbotron text-center comicpanel" style="background-color:black;">
+        <style>
+          .row-morepad {
+                padding-right:15px;
+                padding-left:15px;
+                margin-right: 15px;
+                margin-left: 15px;
+            }
+
+            img.panel:hover {
+                opacity: .5;
+                filter: alpha(opacity=50);
+                border: 0;
+                color: #FFF;
+                display: block;
+            }
+
+            img.panel {
+                opacity: 1.0;
+                filter: alpha(opacity=100);
+                border: 0;
+                background-color:#000000;
+            }
+
+            .imagetitle {
+                font-family: Arial,Verdana;
+                font-weight: 400;
+                letter-spacing: -0.01em;
+            }
+
+            .is-white {
+                font-size: 16px ;
+                color:white;
+         
+            }
+              .cardDetails {
+                font-size: 16px;
+                fill: #FFF;
+                color:white;
+            }
+            div.hovertext {
+                display: none;
+                position: relative;
+                text-align: center;
+                top: -170px;
+                opacity: 1.0;
+            }
+
+            .smaller {
+                font-size: 16px;
+                font-size: 1rem;
+            }
+          
+        </style>
+        <!-- 3 panels here, 3 column with text under each column  -->
+        <!--http://www.queness.com/resources/html/masking-images-with-shape/index.html-->
+        <!--http://www.queness.com/post/14450/display-images-with-shape-masking-and-nifty-zoom-effect-->
+        <div class="row comicpanel row-morepad">
+            <div class="col-sm-4  ">
+                <div class="shape">
+                    <a href="#" class="overlay "></a>
+                    <div class="details">
+                        <br /> &nbsp;<br />
+                        <span class="heading">Software Engineering Leader</span>
+                        <hr />
+                        <span class="is-white icon icon-quotes-left"></span>
+                        <span class="is-white  "> Nerdy By Nature </span>
+                        <span class="  is-white icon icon-quotes-right"></span>
+                        <br /> &nbsp;<br /> 
+                        <span class="cardDetails">MBA, Information Technology/Finance
+                        <br />BS, Marketing/Information Systems 
+                        <br />AWS Certified Solutions Architect Associate
+                        <br />AWS Certified Developer Associate
+                        <br />Full Stack + AR/VR + iOS
+                        </span>
+                        <a href="nerd.html"  class="button cta hvr-float-shadow"><img src="images/go_btn4.png" /></a>
+                        <!--<a href="nerd.html" class="button" >VIEW </a>-->
+                    </div>
+                    <div class="bg"></div>
+                    <div class="base">
+                        <img src="images/nerd-sm.png" class="img-responsive panel wrapper" style="width:100%" alt="Image">
+                        <span class="is-white">Software Engineering Leader</span>
+                    </div>
+                </div>
+
+                <!--<div class="col-sm-4  ">
+                <a class="wrapper">
+                    <img src="images/nerd-1.png" class="img-responsive panel wrapper" style="width:100%" alt="Image">
+                </a>
+
+                <div class="hovertext">
+                    <h2 class="imagetitle wrapper "><span>Full Stack Software Engineer</span></h2><p class="is-white smaller">blah blah blah </p>
+                    <a href="#" class="is-white is-uppercase view"><em class="underline">View Case Study</em></a>
+                </div>-->
+
+            </div>
+            <div class="col-sm-4 ">
+                <div class="shape">
+                    <a href="#" class="overlay "></a>
+                    <div class="details"><br /> &nbsp;<br />
+                        <span class="heading">Athlete + Personal Trainer</span>
+                        <hr />
+                        <span class="is-white icon icon-quotes-left"></span><span class="is-white"> Athletic By Necessity </span><span class=" is-white icon icon-quotes-right"></span>
+                        <br /> &nbsp;<br /><p> 
+                        <span class="cardDetails ">MS, Exercise Science/Sport Psychology </span>
+                        <br/>
+                        <span class="cardDetails ">Cyclist, Runner, Dancer, Adventure Racer... </span>
+                       
+                        <a href="athlete.html"  class="button cta hvr-float-shadow"><img src="images/go_btn.png" /></a>
+
+                    </div>
+                    <div class="bg"></div>
+                    <div class="base">
+                        <!--<img src="images/nerd-1.png" class="img-responsive panel wrapper" style="width:100%" alt="Image">-->
+                        <img src="images/bike-sm.png" class="img-responsive panel" style="width:100%" alt="Image">
+                        <span class="is-white">Athlete & Personal Trainer</span>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="col-sm-4 ">
+
+                <div class="shape">
+                    <a href="#" class="overlay "></a>
+                    <div class="details"><br /> &nbsp;<br />
+                        <span class="heading">Creator + Innovator</span>
+                        <hr />
+                        <span class="is-white icon icon-quotes-left"></span><span class="is-white"> Creative by design </span><span class=" is-white icon icon-quotes-right"></span>
+                        <br /> &nbsp;<br />
+                        
+                         
+                        <p class="is-white smaller">"Creativity is intelligence having fun."
+                          <br/>&#151; Einstein</p>
+                      
+                            <a href="gallery.html" class="button cta hvr-float-shadow"><img src="images/go_btn4.png" /></a>
+                        
+                    </div>
+                    <div class="bg"></div>
+                    <div class="base">
+                        <!--<img src="images/nerd-1.png" class="img-responsive panel wrapper" style="width:100%" alt="Image">-->
+                        <img src="images/fly-3sm.png" class="img-responsive panel" style="width:100%" alt="Image">
+                        <span class="is-white">Creator + Innovator</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+   
+
+    </div>
+
+ 
+    
+    <div id="foreword" class="container-fluid">
+        <h1>Foreword</h1>
+        <div class="row">
+            <div style="position: absolute; left: 0px; ">
+                <span class="glyphicon glyphicon-star  logo" style="color:#ffffcc;"></span>
+            </div>
+            <div class="col-sm-9" style="padding-left:220px;">
+                  <p>
+
+                    I consider myself a modern-day Renaissance woman. 
+                    My primary profession is leading software engineering organizations, 
+                    but at my core, I am a maker with a passion for innovation and technology. I embrace the philosophy of working hard to play hard, constantly dreaming up new projects and adventures to push my physical, intellectual, and creative boundaries.
+
+                  <!--I consider myself a modern-day Renaissance woman. 
+                  While my primary profession is leading software engineering organizations, 
+                  I am fundamentally a maker and have a deep passion for innovation and creating with technology. 
+                  I believe in the philosophy of working hard to play hard, and am constantly dreaming up new projects and 
+                  adventures to push my physical, intellectual, and creative boundaries. 
+                  I believe and practice the Plan-Do-Reflect model for achieving BHAGs (Big, Hairy, Ambitious Goals).
+                  -->
+                  </p>
+                <p><b>Life is short, and my approach is simple: if something doesn’t work, pivot and try something new. </b></p>
+                <p>
+                    I created this site in September 2017 as a platform to explore and showcase my projects and adventures. This site is intentionally a work in progress
+                    </p>
+                    <p>
+                 <b>Perfection was never the goal.</b>
+                     </p>
+                    <p>So here we are.  I welcome feedback and new ideas. If you'd like to collaborate on a project, hit me up on LinkedIn.
+                        </p>
+            </div>
+            <div class="col-sm-2" style="vertical-align:top;">
+                  
+            </div>
+        </div>
     </div>
 
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Bootstrap theme</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
-
-
-    <div class="container theme-showcase" role="main">
-
-
-        <div class="starter-template">
-            <h1>Demo</h1>
-            <p class="lead">Sample Text.<br> </p>
-
-
-            <!-- Main jumbotron for a primary marketing message or call to action -->
-            <div class="jumbotron">
-                <h1>Theme example</h1>
-                <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
-            </div>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="Images/FDSU.gif" alt="FDSU">
-                        <!--<div class="carousel-caption">
-                            <h3>Default Home Page</h3>
-                            <p>Marketing education itself.</p>
-                        </div>-->
-                    </div>
-
-                    <div class="item">
-                        <img src="Images/FDSUEngineering.gif" alt="FDSU Engineering">
-                    </div>
-
-                    <div class="item">
-                        <img src="Images/FDSUMgmt.gif" alt="FDSU Management">
-                    </div>
-
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-
-
-
-
-        </div>
-        <img src="Images/nancy.png" class="img-circle" alt="Nancy Matthews" width="200" height="200">
-
-        <p>
-            <span class="glyphicon glyphicon-envelope"></span>
-            <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
-            <span class="glyphicon glyphicon-search"></span>
-
-            <button type="button" class="btn btn-default">
-                <span class="glyphicon glyphicon-search"></span> Search
-            </button>
-
-
-            <button type="button" class="btn btn-info">
-                <span class="glyphicon glyphicon-search"></span> Search
-            </button>
-            <span class="glyphicon glyphicon-print"></span>
-  
- 
-            <a href="#" class="btn btn-success btn-lg">
-                <span class="glyphicon glyphicon-print"></span>
-            </a>
-            <span class="glyphicon glyphicon-pencil"></span> 
-            <span class="glyphicon glyphicon-star"></span> 
-            <span class="glyphicon glyphicon-star-empty"></span> 
-            <span class="glyphicon glyphicon-trash"></span> 
-            <span class="glyphicon glyphicon-download"></span> 
-            <!--http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp-->
     
-        </p>
-
-        <a href="#">News <span class="badge">5</span></a><br>
-        <a href="#">Comments <span class="badge">10</span></a><br>
-        <a href="#">Updates <span class="badge">2</span></a>
-
+     <div id="section2" class="container-fluid">
+        <h1>My Tenets </h1>
+        
+      <div class="row">
+        <div style="position: absolute; left: 0px; ">
+          <span class="glyphicons glyphicons-person-running logo" style="color:#e6e6e6;"></span>
+        </div>
+        <div class="col-sm-6" style="padding-left:220px;">
         <p>
-            <span class="label label-default">Default Label</span>
-            <span class="label label-primary">Primary Label</span>
-            <span class="label label-success">Success Label</span>
-            <span class="label label-info">Info Label</span>
-            <span class="label label-warning">Warning Label</span>
-            <span class="label label-danger">Danger Label</span>
+        <ol>
+           <li><b>Lead by Example</b><br/>Your actions speak louder than words. Demonstrate excellence and show others what is possible through your own behavior.</li>
+           <li><b>Be Optimistic</b><br/>Enthusiasm is infectious and energizes your team. A positive attitude fosters a productive environment, while negativity can be detrimental.</li>
+           <li><b>Embrace Change</b><br/>When faced with obstacles, find a way forward rather than resisting. Adopt a mindset of adaptability. Success often requires the ability to pivot when necessary.</li>           
+           <li><b>Connect and Communicate</b><br/>Human connection is the foundation for success. Get to know your colleagues, their goals and their achievements. Build a strong network by regularly attending events, reaching out to new people, and facilitating connections for others. 
+           Being able to connect the dots is a key to innovation.</li>
+         
+            </ol>   
+       </p>
+          </div>
+        <div class="col-sm-6"> 
+        <ol start=5 >
+          <li><b>First, Seek to Understand</b><br/>Not all problems require solutions. Ensure you fully understand an issue before deciding if it warrants action. Time is a precious resource—use it wisely.</li>         
+     
+ <li><b>Plan. Do. Reflect</b><br/>Set ambitious, visionary goals. <br/>Maintain laser focus and discipline. Consistency is key to achieving goals, and small actions accumulate over time. 
+           <br/>Regularly ask, "Is what I am doing today bringing me closer to my long-term objectives?" Document your progress, reflect often, and adjust as needed.</li>
+           <li><b>Learn. Do. Teach.</b><br/>Embrace continuous learning. 
+           <br/>In his 2019 AWS re:Invent keynote, Werner Vogels's said "there is no compressional algorithm for experience." 
+           While true, there are strategies to accelerate opportunities for experience.  
+           Progress requires fresh approaches and new tools in your arsenal. Be curious and embrace experimentation. 
+           Continuously seek out new perspectives and methodologies and innovation will follow.
+           <br/>Share your discoveries with others, as teaching can be as rewarding as doing.</li>
+        <li><b>Dare to be Different</b><br/>Your personal brand matters. Aim to create unmatched, exceptional experiences. 
+        Pay attention to details and know when it's appropriate to break the rules. Innovation often comes from challenging the status quo.</li>
+          
+         </ol>
+         </div>
+      </div>
+    </div>
+    
+      <!--
+    <div id="section3" class="container-fluid">
+        <h1>Creative</h1>
+        <div class="row">
+            <div style="position: absolute; left: 0px; ">
+              <span class="glyphicons glyphicons-lightbulb logo" style="color:#e6e6e6;"></span>
+            </div>
+            <div class="col-sm-6" style="padding-left:220px;">
+                <p>I have a wild creative streak. I like to paint, bake, draw, make jewelry.
+                Anything that allows me to create, makes me happy.</p>
+                <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                    <p>&nbsp;</p>
 
-        </p>
+              </div>
+        </div>
+      </div>
+      -->
 
-    </div><!-- /.container -->
+      <div id="section4" class="container-fluid">
+      <h1>Why PhoenixJenn? </h1>
+      <div class="row">
+          <div style="position: absolute; left: 0px; ">
+            <span class="glyphicons glyphicons-fire logo" style="color:#e6e6e6;"></span>
+          </div>
+          <div class="col-sm-6" style="padding-left:200px;">
+            <p>Growing up, my hair was strawberry blonde - or as most people described it - bright orange.
+              I was a bit of a tomboy and loved superheroes.
+              Jean Grey, aka The Phoenix, was also a flaming orange-head.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="images/redhead.png">
+            <p>&nbsp;</p>
+          </div>
+        </div>
+    </div>
+
+
+     <!--
+
+    <div id="section41" class="container-fluid" name="section41">
+        <h1>Section 4 Submenu 1</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-off logo-small"></span>
+                <h4>POWER</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-heart logo-small"></span>
+                <h4>LOVE</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-lock logo-small"></span>
+                <h4>JOB DONE</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-leaf logo-small"></span>
+                <h4>GREEN</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-certificate logo-small"></span>
+                <h4>CERTIFIED</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-wrench logo-small"></span>
+                <h4 style="color:#303030;">HARD WORK</h4>
+                <p>Lorem ipsum dolor sit amet..</p>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="section42" class="container-fluid" name="section42">
+        <h1>Section 4 Submenu 2</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo slideanim"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>Our Values</h2><br>
+                <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+                <p>
+                    <strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+          <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+
+    -->
+
+
+
+
+    <footer class="container-fluid text-center" id="footer">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+      
+    </footer>
+
+    <script src="footer.js" type="text/javascript"></script>
+
+    <!--<script>
+        //$(document).ready(function () {
+        //    // Add smooth scrolling to all links in navbar + footer link
+
+
+        //    $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+        //        // Make sure this.hash has a value before overriding default behavior
+
+        //        var myURL = this.toString();
+        //        var myhash = this.hash.toString();
+        //        var strippedURL = myURL.replace(myhash, '');
+
+        //        strippedURL = strippedURL.split("/").pop();
+        //        // alert(strippedURL);
+
+        //        var path = window.location.pathname;
+        //        var page = path.split("/").pop();
+        //        // alert(page);
+
+        //        if (this.hash !== "" && (page == strippedURL)) {
+
+        //            // Prevent default anchor click behavior IF ON SAME PAGE
+        //            event.preventDefault();
+
+        //            // Store hash
+        //            var hash = this.hash;
+
+        //            // Using jQuery's animate() method to add smooth page scroll
+        //            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        //            $('html, body').animate({
+        //                scrollTop: $(hash).offset().top
+        //            }, 900, function () {
+
+        //                // Add hash (#) to URL when done scrolling (default click behavior)
+        //                window.location.hash = hash;
+        //            });
+        //        } // End if
+
+        //    });
+
+        //    $(window).scroll(function () {
+
+
+
+
+        //        $(".slideanim").each(function () {
+        //            var pos = $(this).offset().top;
+
+        //            var winTop = $(window).scrollTop();
+        //            if (pos < winTop + 600) {
+        //                $(this).addClass("slide");
+        //            }
+        //        });
+
+
+
+
+        //    });
+        //})
+    </script>-->
+
+
+
+
 </body>
+
+
+
+
+
+
+
 </html>
