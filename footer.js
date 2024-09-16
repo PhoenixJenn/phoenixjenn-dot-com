@@ -1,15 +1,4 @@
-﻿//if(window.attachEvent) {
-//    window.attachEvent('onload', yourFunctionName);
-//}
-//else {
-//    if (window.onload) {
-
-//        var myURL = this.toString();
-//        var myhash = this.hash.toString();
-//        var strippedURL = myURL.replace(myhash, '');
-
-
-
+﻿
 
 
 $(document).ready(function () {
@@ -73,13 +62,4 @@ $(document).ready(function () {
 
 
 
-    //$(window).load(function () {
-
-    //    var myURL = window.location.pathname.toString();
-    //   // var myhash = this.hash.toString();
-    //   // var strippedURL = myURL.replace(myhash, '');
-
-    //    //strippedURL = strippedURL.split("/").pop();
-    //    alert(myURL);
-    //});
 })

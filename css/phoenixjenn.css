@@ -12,6 +12,9 @@ h1 {
 a {
   color: #ffd800;
 }
+a.yellowbg {
+    color: #0094ff;
+}
 /*
 line height line-height: 0.8;
 text-transform: uppercase;
@@ -27,22 +30,38 @@ div > p {
 /*
 Colored Panels
 */
+#comicpanel {
+    background-color: #000000;
+}
 #section1, #foreword{
     color: #000000;
     background-color: #ffd800;
 }
 
-#section2 {
-    padding-top: 10px;
+#foreword .yellow {
+    padding-top: 20px;
+    height: 500px;
     color: #000000;
-    background-color: #ffffff;
+    font-family: verdana;
+    background-color: #ffd800; 
+   
 }
 
-#section3 {
+#section2  .white{
     padding-top: 10px;
-    color: #ffffff;
-    background-color: #0094ff;
+    height: 500px;
+    font-family: verdana;
+    color: #000000;
+    background-color: #ffffff; 
 }
+#section3 .blue {
+    padding-top: 50px;
+    height: 500px;
+    font-family: verdana;
+    color: #ffffff;
+    background-color: #0094ff;  
+}
+
  #section4 {
     padding-top: 50px;
     background-color: #ff0000;

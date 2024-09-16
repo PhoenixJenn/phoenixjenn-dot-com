@@ -20,7 +20,7 @@
     <link href="css/glyphs.css" rel="stylesheet" type="text/css">
     <link href="css/glyphicons.css" rel="stylesheet" type="text/css">
     <link href="css/socicon.css" rel="stylesheet" type="text/css">
-   <link href="css/phoenixjenn.css" rel="stylesheet"/>
+    <link href="css/phoenixjenn.css" rel="stylesheet"/>
    
     
     <link href="Hover-master/css/hover-min.css" rel="stylesheet"/>
@@ -35,75 +35,6 @@
     <script type="text/javascript" src="bootstrap3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="Scripts/ui-bootstrap-tpls-1.3.3.min.js"></script>
 
-   
-
-
-       <!--<script>
-        jQuery(function ($) {
-            // local url of page (minus any hash, but including any potential query string)
-            var url = location.href.replace(/#.*/, '');
-
-            // Find all anchors
-            $('.nav-main').find('a[href]').each(function (i, a) {
-                var $a = $(a);
-                var href = $a.attr('href');
-
-               //// added this block JL
-               // if (href.indexOf(url + '#') == 0) {
-               //     alert(url);
-               //     href = href.replace(/^\//, "");
-               //     href = href.replace(/#.*/, '');
-               // }
-                // check is anchor href starts with page's URI
-                if (href.indexOf(url + '#') == 0) {
-                    // remove URI from href
-
-                    href = href.replace(url, '');
-                    // update anchors HREF with new one
-                    $a.attr('href', href);
-                }
-
-                // Now refresh scrollspy
-                $('[data-spy="scroll"]').each(function (i, spy) {
-                    var $spy = $(this).scrollspy('refresh')
-                })
-            });
-
-            $('body').scrollspy({ target: '.nav-main', offset: 155 })
-
-        });-->
-
-        <!--/**
- * Scroll Spy via Bootstrap
- */
-        $('body').scrollspy({ target: "#nav_wrapper", offset: 50 });
-
-        /**
-         * Scroll Spy meet WordPress menu.
-         */
-        // Only fire when not on the homepage
-        if (window.location.pathname !== "/") {
-            // Selector for top nav a elements
-            $('#top_main_nav a').each(function () {
-                if (this.hash.indexOf('#') === 0) {
-                    // Alert this to an absolute link (pointing to the correct section on the hompage)
-                    this.href = "/" + this.hash;
-                }
-            });
-        }
-
-        /**
-         * Initiate Awesome Smooth Scrolling based on a.href
-         */
-        $('a.smooth-scroll, #top_main_nav a').click(function () {
-            target = $(this).attr('href');
-            offset = $(target).offset();
-            $('body,html').animate({ scrollTop: offset.top }, 700);
-            event.preventDefault();
-        });
-    </script>-->
-
-
     <style>
 
 
@@ -112,53 +43,7 @@
              background-color: #ffffff;
         }
       
-        #comicpanel {
-            background-color: #000000;
-        }
-        #foreword .yellow {
-            padding-top: 20px;
-            height: 500px;
-            color: #000000;
-            font-family: verdana;
-            background-color: #ffd800; 
-            
-        }
         
-          
-        #section2  .white{
-            padding-top: 10px;
-            height: 500px;
-            font-family: verdana;
-            color: #000000;
-            background-color: #ffffff; 
-        }
-
-        #section3 .blue {
-            padding-top: 50px;
-            height: 500px;
-            font-family: verdana;
-            color: #ffffff;
-            background-color: #0094ff;  
-        }
-         #section4 .red {
-            padding-top: 50px;
-            height: 500px;
-            color: #ffffff;
-            background-color: #ff0000; 
-        }
-        #section41  .grey{
-            padding-top: 50px;
-            height: 500px;
-            color: #000;
-            background-color: #808080; 
-        }
-
-        #section42 {
-            padding-top: 10px;
-            height: 500px;
-            color: #808080;
-            background-color: #ffffff;
-        }
         .fadeInUp {
             -webkit-animation-name: fadeInUp;
             animation-name: fadeInUp;
@@ -266,15 +151,7 @@
                     </div>
                 </div>
 
-                <!--<div class="col-sm-4  ">
-                <a class="wrapper">
-                    <img src="images/nerd-1.png" class="img-responsive panel wrapper" style="width:100%" alt="Image">
-                </a>
-
-                <div class="hovertext">
-                    <h2 class="imagetitle wrapper "><span>Full Stack Software Engineer</span></h2><p class="is-white smaller">blah blah blah </p>
-                    <a href="#" class="is-white is-uppercase view"><em class="underline">View Case Study</em></a>
-                </div>-->
+             
 
             </div>
             <div class="col-sm-4 ">
@@ -344,32 +221,34 @@
             <div style="position: absolute; left: 0px; ">
                 <span class="glyphicon glyphicon-star  logo" style="color:#ffffcc;"></span>
             </div>
-            <div class="col-sm-9" style="padding-left:220px;">
+            <div class="col-sm-8" style="padding-left:220px;">
                   <p>
 
                     I consider myself a modern-day Renaissance woman. 
                     My primary profession is leading software engineering organizations, 
-                    but at my core, I am a maker with a passion for innovation and technology. I embrace the philosophy of working hard to play hard, constantly dreaming up new projects and adventures to push my physical, intellectual, and creative boundaries.
-
-                  <!--I consider myself a modern-day Renaissance woman. 
-                  While my primary profession is leading software engineering organizations, 
-                  I am fundamentally a maker and have a deep passion for innovation and creating with technology. 
-                  I believe in the philosophy of working hard to play hard, and am constantly dreaming up new projects and 
-                  adventures to push my physical, intellectual, and creative boundaries. 
-                  I believe and practice the Plan-Do-Reflect model for achieving BHAGs (Big, Hairy, Ambitious Goals).
-                  -->
+                    but at my core, I am a maker with a flair for creativity and a passion for innovating with technology. 
+                    I embrace the philosophy of working hard to play hard, 
+                    constantly dreaming up new projects and adventures to push my physical, 
+                    intellectual, and creative boundaries. I love tech. 
                   </p>
                 <p><b>Life is short, and my approach is simple: if something doesn’t work, pivot and try something new. </b></p>
                 <p>
-                    I created this site in September 2017 as a platform to explore and showcase my projects and adventures. This site is intentionally a work in progress
+                    I created this site as a platform to explore and showcase my projects and adventures. 
+                    As such, it is intentionally a work in progress.
                     </p>
                     <p>
                  <b>Perfection was never the goal.</b>
                      </p>
-                    <p>So here we are.  I welcome feedback and new ideas. If you'd like to collaborate on a project, hit me up on LinkedIn.
-                        </p>
+                    <p>So here we are.  I welcome feedback and new ideas. If you'd like to collaborate on a project, hit me up on LinkedIn.</p>
+                    <p>Some of my pet projects:
+                        <ul>
+                            <li><a class="yellowbg" href="https://www.survivingthetechnicalinterview.com" target="_blank">Surviving The Technical Interview</a>: A resource for studying to interview for tech jobs</li>
+                            <li><a class="yellowbg" href="http://www.augmentyourexperience.com" target="_blank">Augment Your Experience</a>: A blog capturing my AR/VR/Spatial research</li>
+                        </ul>
+                           
+                    </p>
             </div>
-            <div class="col-sm-2" style="vertical-align:top;">
+            <div class="col-sm-3" style="vertical-align:top;">
                   
             </div>
         </div>
