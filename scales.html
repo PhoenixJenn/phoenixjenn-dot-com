@@ -1,33 +1,47 @@
-
-
-<!-- Create a basic HTML layout with a heading, a dropdown to select key, and a div for the keyboard -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Piano Scales</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="bootstrap3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/glyphs.css" rel="stylesheet" type="text/css">
+    <link href="css/glyphicons.css" rel="stylesheet" type="text/css">
+    <link href="css/socicon.css" rel="stylesheet" type="text/css">
+    <link href="css/phoenixjenn.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/scales.css">
+
+    <script type="text/javascript" src="Scripts/angular.js"></script>
+    <script type="text/javascript" src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="bootstrap3.3.6/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="controls">
-            <select id="scaleSelector">
-                <option value="C">C Major</option>
-                <option value="G">G Major</option>
-                <option value="D">D Major</option>
-                <option value="A">A Major</option>
-                <option value="E">E Major</option>
-                <option value="F">F Major</option>
-                <option value="Bb">B♭ Major</option>
-                <option value="Eb">E♭ Major</option>
-            </select>
+<body ng-app="">
+    <div ng-include="'nav.html'"></div>
+
+    <div class="scales-container">
+        <div class="scale-control-box" role="group" aria-label="Scale selection">
+            <div class="scale-control-group scale-type-group">
+                <span class="scale-inline-label">Scale type</span>
+                <label class="scale-radio"><input type="radio" name="scaleMode" value="major" checked> Major</label>
+                <label class="scale-radio"><input type="radio" name="scaleMode" value="minor"> Minor</label>
+            </div>
+            <div class="scale-control-group scale-picker-group">
+                <label class="scale-inline-label" for="scaleSelector">Scale</label>
+                <select id="scaleSelector" aria-label="Choose scale root"></select>
+            </div>
+            <div class="scale-control-group scale-play-group">
+                <button type="button" id="playScaleBtn" class="btn-play-scale">PLAY</button>
+                <button type="button" id="reversePlayScaleBtn" class="btn-play-scale">REVERSE PLAY</button>
+            </div>
         </div>
-        
+
         <div id="piano">
             <div class="octave" id="octave1"></div>
             <div class="octave" id="octave2"></div>
         </div>
+        <div id="scale-display" class="scale-display"></div>
     </div>
     <script src="Scripts/scales.js"></script>
 </body>

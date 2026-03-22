@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///Users/jennlee/aurebesh-translator/aurebesh-translator.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurebesh Translator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./AurebeshTranslatorOriginal_files/css2" rel="stylesheet">
+  <link href="./AurebeshTranslatorOriginal_files/aurebesh" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #05080f;
+      --bg-panel: rgba(12, 20, 35, 0.72);
+      --border: rgba(0, 245, 255, 0.35);
+      --glow: #00f5ff;
+      --text: #e8f4ff;
+      --muted: #7a9bb8;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: "Rajdhani", system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg-deep);
+      line-height: 1.45;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse 120% 80% at 50% -20%, rgba(0, 245, 255, 0.12), transparent 55%),
+        radial-gradient(ellipse 80% 60% at 100% 100%, rgba(196, 77, 255, 0.08), transparent 50%),
+        linear-gradient(180deg, #05080f 0%, #0a1020 40%, #05080f 100%);
+    }
+
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image:
+        linear-gradient(rgba(0, 245, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 245, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
+      pointer-events: none;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-family: "Orbitron", sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 0.5rem;
+      color: #fff;
+      text-shadow:
+        0 0 20px rgba(0, 245, 255, 0.45),
+        0 0 40px rgba(196, 77, 255, 0.25);
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+
+    .panels {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 960px) {
+      .panels {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
+    .panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.35rem 1.35rem 1.5rem;
+      box-shadow:
+        0 0 0 1px rgba(0, 245, 255, 0.06) inset,
+        0 20px 50px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(0, 245, 255, 0.15);
+    }
+
+    .panel-head h2 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin: 0;
+      color: var(--glow);
+    }
+
+    .badge {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid rgba(196, 77, 255, 0.35);
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+    }
+
+    textarea,
+    .out-box {
+      width: 100%;
+      min-height: 120px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 245, 255, 0.22);
+      background: rgba(0, 10, 24, 0.65);
+      color: var(--text);
+      font-size: 1rem;
+      padding: 0.85rem 1rem;
+      resize: vertical;
+      font-family: "Rajdhani", sans-serif;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: rgba(0, 245, 255, 0.55);
+      box-shadow: 0 0 0 3px rgba(0, 245, 255, 0.12);
+    }
+
+    .out-box {
+      min-height: 120px;
+      font-family: "Aurebesh", "Rajdhani", sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.12em;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    button.btn {
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.55rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 245, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 245, 255, 0.12), rgba(196, 77, 255, 0.08));
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+
+    button.btn:hover {
+      border-color: rgba(0, 245, 255, 0.75);
+      box-shadow: 0 0 18px rgba(0, 245, 255, 0.2);
+    }
+
+    button.btn:active {
+      transform: scale(0.98);
+    }
+
+    button.btn.secondary {
+      border-color: rgba(196, 77, 255, 0.4);
+      background: linear-gradient(135deg, rgba(196, 77, 255, 0.1), transparent);
+    }
+
+    .latin-readout {
+      min-height: 3.25rem;
+      border-radius: 10px;
+      border: 1px solid rgba(196, 77, 255, 0.25);
+      background: rgba(8, 12, 28, 0.75);
+      padding: 0.75rem 1rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      word-break: break-word;
+    }
+
+    .latin-readout.empty {
+      color: var(--muted);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .sign-label {
+      margin: 1rem 0 0.5rem;
+    }
+
+    .glyph-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+      gap: 0.45rem;
+    }
+
+    .glyph-btn {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0.25rem 0.15rem 0.35rem;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 245, 255, 0.22);
+      background: rgba(0, 18, 40, 0.55);
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .glyph-btn:hover {
+      border-color: rgba(0, 245, 255, 0.55);
+      box-shadow: 0 0 14px rgba(0, 245, 255, 0.15);
+      background: rgba(0, 40, 70, 0.45);
+    }
+
+    .glyph-btn:active {
+      transform: scale(0.97);
+    }
+
+    .glyph-btn .glyph {
+      font-family: "Aurebesh", sans-serif;
+      font-size: 1.35rem;
+      line-height: 1;
+      color: #b8f9ff;
+      text-shadow: 0 0 12px rgba(0, 245, 255, 0.35);
+    }
+
+    .glyph-btn .sub {
+      font-size: 0.58rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-top: 0.2rem;
+      text-transform: uppercase;
+    }
+
+    .glyph-btn.wide {
+      grid-column: span 2;
+    }
+
+    .glyph-btn.is-space .glyph {
+      display: inline-block;
+      min-width: 1.5em;
+      border-bottom: 2px solid rgba(0, 245, 255, 0.45);
+      height: 0.5em;
+      align-self: center;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header>
+      <h1>Aurebesh Translator</h1>
+      <p>Galactic Standard ↔ Aurebesh · tap the sign or type below</p>
+    </header>
+
+    <div class="panels">
+      <section class="panel" aria-labelledby="to-aurebesh-title">
+        <div class="panel-head">
+          <h2 id="to-aurebesh-title">Standard → Aurebesh</h2>
+          <span class="badge">Input</span>
+        </div>
+        <label for="latin-in">Galactic Standard (English)</label>
+        <textarea id="latin-in" rows="4" placeholder="Type your message…" spellcheck="false"></textarea>
+        <div class="toolbar">
+          <button type="button" class="btn" id="copy-aurebesh">Copy Aurebesh</button>
+          <button type="button" class="btn secondary" id="clear-latin">Clear</button>
+        </div>
+        <label for="aurebesh-out" style="margin-top: 1rem">Aurebesh display</label>
+        <div id="aurebesh-out" class="out-box" role="status" aria-live="polite">—</div>
+      </section>
+
+      <section class="panel" aria-labelledby="from-aurebesh-title">
+        <div class="panel-head">
+          <h2 id="from-aurebesh-title">Aurebesh → Standard</h2>
+          <span class="badge">Sign</span>
+        </div>
+        <label for="latin-readout">Translation</label>
+        <div id="latin-readout" class="latin-readout empty" aria-live="polite">Tap glyphs on the sign to build text…</div>
+        <div class="toolbar">
+          <button type="button" class="btn" id="copy-latin">Copy text</button>
+          <button type="button" class="btn secondary" id="backspace-latin">Backspace</button>
+          <button type="button" class="btn secondary" id="clear-tap">Clear all</button>
+        </div>
+        <p class="sign-label"><label>Character sign — select symbols</label></p>
+        <div id="glyph-grid" class="glyph-grid"><button type="button" class="glyph-btn" aria-label="Add A"><span class="glyph">A</span><span class="sub">A</span></button><button type="button" class="glyph-btn" aria-label="Add B"><span class="glyph">B</span><span class="sub">B</span></button><button type="button" class="glyph-btn" aria-label="Add C"><span class="glyph">C</span><span class="sub">C</span></button><button type="button" class="glyph-btn" aria-label="Add D"><span class="glyph">D</span><span class="sub">D</span></button><button type="button" class="glyph-btn" aria-label="Add E"><span class="glyph">E</span><span class="sub">E</span></button><button type="button" class="glyph-btn" aria-label="Add F"><span class="glyph">F</span><span class="sub">F</span></button><button type="button" class="glyph-btn" aria-label="Add G"><span class="glyph">G</span><span class="sub">G</span></button><button type="button" class="glyph-btn" aria-label="Add H"><span class="glyph">H</span><span class="sub">H</span></button><button type="button" class="glyph-btn" aria-label="Add I"><span class="glyph">I</span><span class="sub">I</span></button><button type="button" class="glyph-btn" aria-label="Add J"><span class="glyph">J</span><span class="sub">J</span></button><button type="button" class="glyph-btn" aria-label="Add K"><span class="glyph">K</span><span class="sub">K</span></button><button type="button" class="glyph-btn" aria-label="Add L"><span class="glyph">L</span><span class="sub">L</span></button><button type="button" class="glyph-btn" aria-label="Add M"><span class="glyph">M</span><span class="sub">M</span></button><button type="button" class="glyph-btn" aria-label="Add N"><span class="glyph">N</span><span class="sub">N</span></button><button type="button" class="glyph-btn" aria-label="Add O"><span class="glyph">O</span><span class="sub">O</span></button><button type="button" class="glyph-btn" aria-label="Add P"><span class="glyph">P</span><span class="sub">P</span></button><button type="button" class="glyph-btn" aria-label="Add Q"><span class="glyph">Q</span><span class="sub">Q</span></button><button type="button" class="glyph-btn" aria-label="Add R"><span class="glyph">R</span><span class="sub">R</span></button><button type="button" class="glyph-btn" aria-label="Add S"><span class="glyph">S</span><span class="sub">S</span></button><button type="button" class="glyph-btn" aria-label="Add T"><span class="glyph">T</span><span class="sub">T</span></button><button type="button" class="glyph-btn" aria-label="Add U"><span class="glyph">U</span><span class="sub">U</span></button><button type="button" class="glyph-btn" aria-label="Add V"><span class="glyph">V</span><span class="sub">V</span></button><button type="button" class="glyph-btn" aria-label="Add W"><span class="glyph">W</span><span class="sub">W</span></button><button type="button" class="glyph-btn" aria-label="Add X"><span class="glyph">X</span><span class="sub">X</span></button><button type="button" class="glyph-btn" aria-label="Add Y"><span class="glyph">Y</span><span class="sub">Y</span></button><button type="button" class="glyph-btn" aria-label="Add Z"><span class="glyph">Z</span><span class="sub">Z</span></button><button type="button" class="glyph-btn" aria-label="Add 0"><span class="glyph">0</span><span class="sub">0</span></button><button type="button" class="glyph-btn" aria-label="Add 1"><span class="glyph">1</span><span class="sub">1</span></button><button type="button" class="glyph-btn" aria-label="Add 2"><span class="glyph">2</span><span class="sub">2</span></button><button type="button" class="glyph-btn" aria-label="Add 3"><span class="glyph">3</span><span class="sub">3</span></button><button type="button" class="glyph-btn" aria-label="Add 4"><span class="glyph">4</span><span class="sub">4</span></button><button type="button" class="glyph-btn" aria-label="Add 5"><span class="glyph">5</span><span class="sub">5</span></button><button type="button" class="glyph-btn" aria-label="Add 6"><span class="glyph">6</span><span class="sub">6</span></button><button type="button" class="glyph-btn" aria-label="Add 7"><span class="glyph">7</span><span class="sub">7</span></button><button type="button" class="glyph-btn" aria-label="Add 8"><span class="glyph">8</span><span class="sub">8</span></button><button type="button" class="glyph-btn" aria-label="Add 9"><span class="glyph">9</span><span class="sub">9</span></button><button type="button" class="glyph-btn wide is-space" aria-label="Add space"><span class="glyph">&nbsp;</span><span class="sub">space</span></button><button type="button" class="glyph-btn" aria-label="Add ."><span class="glyph">.</span><span class="sub">.</span></button><button type="button" class="glyph-btn" aria-label="Add ,"><span class="glyph">,</span><span class="sub">,</span></button><button type="button" class="glyph-btn" aria-label="Add &#39;"><span class="glyph">'</span><span class="sub">'</span></button><button type="button" class="glyph-btn" aria-label="Add ?"><span class="glyph">?</span><span class="sub">?</span></button><button type="button" class="glyph-btn" aria-label="Add !"><span class="glyph">!</span><span class="sub">!</span></button><button type="button" class="glyph-btn" aria-label="Add -"><span class="glyph">-</span><span class="sub">-</span></button><button type="button" class="glyph-btn" aria-label="Add :"><span class="glyph">:</span><span class="sub">:</span></button><button type="button" class="glyph-btn" aria-label="Add ;"><span class="glyph">;</span><span class="sub">;</span></button></div>
+      </section>
+    </div>
+
+    <footer>
+      Fan project · Aurebesh maps to the Latin alphabet. Unsupported characters pass through in the Standard → Aurebesh view.
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+      const DIGITS = "0123456789".split("");
+      const SPACE = " ";
+      const PUNCT = [".", ",", "'", "?", "!", "-", ":", ";"];
+
+      const latinIn = document.getElementById("latin-in");
+      const aurebeshOut = document.getElementById("aurebesh-out");
+      const latinReadout = document.getElementById("latin-readout");
+      const glyphGrid = document.getElementById("glyph-grid");
+
+      let tapBuffer = "";
+
+      function updateAurebeshDisplay() {
+        const raw = latinIn.value;
+        aurebeshOut.textContent = raw.length ? raw : "—";
+      }
+
+      function updateLatinReadout() {
+        if (!tapBuffer.length) {
+          latinReadout.textContent = "Tap glyphs on the sign to build text…";
+          latinReadout.classList.add("empty");
+          return;
+        }
+        latinReadout.textContent = tapBuffer;
+        latinReadout.classList.remove("empty");
+      }
+
+      function appendFromSign(ch) {
+        tapBuffer += ch;
+        updateLatinReadout();
+      }
+
+      function makeGlyphButton(char, label) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "glyph-btn";
+        btn.setAttribute("aria-label", "Add " + (char === " " ? "space" : label || char));
+        const g = document.createElement("span");
+        g.className = "glyph";
+        if (char === " ") {
+          g.innerHTML = "\u00a0";
+        } else {
+          g.textContent = char;
+        }
+        const sub = document.createElement("span");
+        sub.className = "sub";
+        sub.textContent = label || char;
+        btn.appendChild(g);
+        btn.appendChild(sub);
+        btn.addEventListener("click", function () {
+          appendFromSign(char);
+        });
+        return btn;
+      }
+
+      function buildGrid() {
+        LETTERS.forEach(function (c) {
+          glyphGrid.appendChild(makeGlyphButton(c, c));
+        });
+        DIGITS.forEach(function (c) {
+          glyphGrid.appendChild(makeGlyphButton(c, c));
+        });
+        const sp = makeGlyphButton(SPACE, "space");
+        sp.classList.add("wide", "is-space");
+        glyphGrid.appendChild(sp);
+        PUNCT.forEach(function (c) {
+          glyphGrid.appendChild(makeGlyphButton(c, c));
+        });
+      }
+
+      latinIn.addEventListener("input", updateAurebeshDisplay);
+
+      document.getElementById("clear-latin").addEventListener("click", function () {
+        latinIn.value = "";
+        updateAurebeshDisplay();
+        latinIn.focus();
+      });
+
+      document.getElementById("copy-aurebesh").addEventListener("click", async function () {
+        const t = latinIn.value;
+        if (!t) return;
+        try {
+          await navigator.clipboard.writeText(t);
+        } catch (e) {
+          /* ignore */
+        }
+      });
+
+      document.getElementById("copy-latin").addEventListener("click", async function () {
+        if (!tapBuffer) return;
+        try {
+          await navigator.clipboard.writeText(tapBuffer);
+        } catch (e) {
+          /* ignore */
+        }
+      });
+
+      document.getElementById("backspace-latin").addEventListener("click", function () {
+        tapBuffer = tapBuffer.slice(0, -1);
+        updateLatinReadout();
+      });
+
+      document.getElementById("clear-tap").addEventListener("click", function () {
+        tapBuffer = "";
+        updateLatinReadout();
+      });
+
+      buildGrid();
+      updateAurebeshDisplay();
+      updateLatinReadout();
+    })();
+  </script>
+
+
+</body></html>

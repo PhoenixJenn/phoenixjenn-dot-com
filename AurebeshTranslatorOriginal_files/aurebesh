@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Aurebesh';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Aurebesh'), url('https://fonts.cdnfonts.com/s/64479/Aurebesh.woff') format('woff');
+}
+@font-face {
+    font-family: 'Aurebesh';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Aurebesh'), url('https://fonts.cdnfonts.com/s/64479/Aurebesh Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Aurebesh';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Aurebesh'), url('https://fonts.cdnfonts.com/s/64479/Aurebesh Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Aurebesh';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Aurebesh'), url('https://fonts.cdnfonts.com/s/64479/Aurebesh Bold Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Aurebesh Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Aurebesh Condensed'), url('https://fonts.cdnfonts.com/s/64479/Aurebesh Condensed.woff') format('woff');
+}
+@font-face {
+    font-family: 'Aurebesh Condensed';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Aurebesh Condensed'), url('https://fonts.cdnfonts.com/s/64479/Aurebesh Condensed Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Aurebesh Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Aurebesh Condensed'), url('https://fonts.cdnfonts.com/s/64479/Aurebesh Condensed Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Aurebesh Condensed';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Aurebesh Condensed'), url('https://fonts.cdnfonts.com/s/64479/Aurebesh Condensed Bold Italic.woff') format('woff');
+}
+
+
